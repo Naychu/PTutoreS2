@@ -4,8 +4,6 @@
 ## Dernières modifications :
 - 20/04/2021: Demo Labyrinthe
 
-# Avancées
-
 ## Etape 1
 Avant le lundi 26 avril 2021 (23h)
 
