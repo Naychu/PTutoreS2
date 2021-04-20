@@ -1,7 +1,7 @@
 # Projet Tutoré S2
 [http://www.cril.univ-artois.fr/~hemery/enseignement/An20-21/projetTutS2/](http://www.cril.univ-artois.fr/~hemery/enseignement/An20-21/projetTutS2/)
 
-## Dernières modifications :
+Modifications récentes sur la répo :
 - 20/04/2021: Demo Labyrinthe
 
 ## Etape 1
