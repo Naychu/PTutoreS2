@@ -1,12 +1,9 @@
 # Projet Tutoré S2
-
-Modifications récentes sur la répo :
-- 20/04/2021: Demo Labyrinthe
-
 [Sujet Projet](http://www.cril.univ-artois.fr/~hemery/enseignement/An20-21/projetTutS2/)
 
 ## Etape 1
 Avant le lundi 26 avril 2021 (23h)
+- 20/04/2021: Demo Labyrinthe
 
 ## Etape 2
 Avant le mercredi 12 mai 2021 (23h)
