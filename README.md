@@ -1,4 +1,4 @@
 # PTutoreS2
 
-## Dernière modifications :
+## Dernières modifications :
 - 20/04/2021: Demo Labyrinthe
