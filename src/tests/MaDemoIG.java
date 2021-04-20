@@ -25,6 +25,18 @@ public class MaDemoIG {
 		// l'objet 1 se trouve en position 1 pour le joueur 0...
 		for(int i = 1; i <= 5; i++) IG.changerObjetJoueur(0, i, i);
 		
+		// Les objets des 2 autres joueurs
+		int t = 0;
+		for(int j = 6; j <= 11; j++) {
+			IG.changerObjetJoueur(1, j, t);
+			t++;
+		}
+		t = 0;
+		for(int j = 12; j <= 17; j++) {
+			IG.changerObjetJoueur(2, j, t);
+			t++;
+		}
+		
 		// Le plateau ne contient que des pièces du modèle 2 et de type 0.
 		for(int i = 0; i <= 6; i++) {
 			for(int j = 0; j < 7; j++) {
