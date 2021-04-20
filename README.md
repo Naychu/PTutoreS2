@@ -3,6 +3,7 @@
 
 ## Etape 1
 Avant le lundi 26 avril 2021 (23h)
+- 20/04/2021: Avancement sur la classe DemoIG19 + Thème
 - 20/04/2021: Demo Labyrinthe
 
 ## Etape 2
