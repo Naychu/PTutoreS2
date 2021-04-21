@@ -27,8 +27,8 @@
 <details open="open">
   <summary>Table des matières</summary>
   <ol>
-    <li><a href="#construit avec">Construit avec</a></li>
-    <li><a href="#installation">Installation</a></li>
+    <li><a href="#construit-avec">Construit avec</a></li>
+    <li><a href="#pré-requis">Pré-requis</a></li>
     <li><a href="#contribuer">Contribution</a></li>
   </ol>
 </details>
