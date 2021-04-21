@@ -27,14 +27,9 @@
 <details open="open">
   <summary>Table des matières</summary>
   <ol>
-    <li>
-      <a href="#about-the-project">A propos du brojet</a>
-      <ul>
-        <li><a href="#built-with">Construit avec</a></li>
-      </ul>
-    </li>
+    <li><a href="#construit avec">Construit avec</a></li>
     <li><a href="#installation">Installation</a></li>
-    <li><a href="#contributing">Contribution</a></li>
+    <li><a href="#contribuer">Contribution</a></li>
   </ol>
 </details>
 
