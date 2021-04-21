@@ -33,59 +33,24 @@
         <li><a href="#built-with">Construit avec</a></li>
       </ul>
     </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgements">Acknowledgements</a></li>
+    <li><a href="#installation">Installation</a></li>
+    <li><a href="#contributing">Contribution</a></li>
   </ol>
 </details>
 
 ### Construit avec
 
 Cette section contient les langages et librairies utilisées pour le projet.
-* [Java](https://getbootstrap.com)
-
-
-
-<!-- GETTING STARTED -->
-## Getting Started
-
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+* [Java](https://java.com)
 
 ### Pré-requis
 
-Pour lancer le programme vous devez posséder Java 8+ d'installé:
+Pour lancer le programme vous devez posséder Java 8+ JDK d'installé:
 
   ```sh
   Ubuntu:
   apt install openjdk-8-jre
   ```
-
-### Installation
-
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/your_username_/Project-Name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```JS
-   const API_KEY = 'ENTER YOUR API';
-   ```
 
 <!-- CONTRIBUTING -->
 ## Contribuer
