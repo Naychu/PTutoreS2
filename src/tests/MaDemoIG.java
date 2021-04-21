@@ -184,6 +184,7 @@ public class MaDemoIG {
 		IG.miseAJourAffichage();
 		IG.attendreClic();
 		
+		// Gagnant
 		IG.afficherGagnant(0);
 		String message5[]={
 				"",
