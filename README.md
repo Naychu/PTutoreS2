@@ -1,19 +1,15 @@
-# Projet Tutoré S2
-[Sujet Projet](http://www.cril.univ-artois.fr/~hemery/enseignement/An20-21/projetTutS2/)
-
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
 
 
 
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
+  <a href="https://github.com/HiYarlia/PTutoreS2">
     <img src="https://user-images.githubusercontent.com/60405693/115529017-d8228d00-a292-11eb-876a-4957c63bdcdd.png" alt="Logo" width="180" height="80">
   </a>
 
@@ -37,12 +33,12 @@
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">
-  <summary>Table of Contents</summary>
+  <summary>Table des matières</summary>
   <ol>
     <li>
-      <a href="#about-the-project">About The Project</a>
+      <a href="#about-the-project">A propos du brojet</a>
       <ul>
-        <li><a href="#built-with">Built With</a></li>
+        <li><a href="#built-with">Construit avec</a></li>
       </ul>
     </li>
     <li>
@@ -63,8 +59,7 @@
 
 
 
-<!--
-## About The Project
+
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
@@ -79,12 +74,10 @@ Of course, no one template will serve all projects since your needs may be diffe
 
 A list of commonly used resources that I find helpful are listed in the acknowledgements.
 
-### Built With
+### Construit avec
 
-This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-* [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
-* [Laravel](https://laravel.com)
+Cette section contient les langages et librairies utilisées pour le projet.
+* [Java](https://getbootstrap.com)
 
 
 
