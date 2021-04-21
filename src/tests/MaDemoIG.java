@@ -5,6 +5,8 @@ public class MaDemoIG {
 
 	public static void main(String[] args) {
 		
+		int taillePlateau = 7;
+		
 		Object parametres[];
 		parametres=IG.saisirParametres();
 		
@@ -18,7 +20,7 @@ public class MaDemoIG {
 		IG.changerImageJoueur(1,((Integer)parametres[6]).intValue());
 		IG.changerNomJoueur(2, (String)parametres[7] +" ("+ (String)parametres[8] +")");
 		IG.changerImageJoueur(2,((Integer)parametres[9]).intValue());
-		
+	
 		// Les objets des joueurs sont affichés en suivant l'ordre de leur numéro :
 		// l'objet 0 se trouve en position 0 pour le joueur 0,
 		IG.changerObjetJoueur(0, 0, 0);
@@ -38,8 +40,8 @@ public class MaDemoIG {
 		}
 		
 		// Le plateau ne contient que des pièces du modèle 2 et de type 0.
-		for(int i = 0; i <= 6; i++) {
-			for(int j = 0; j < 7; j++) {
+		for(int i = 0; i <= taillePlateau - 1; i++) {
+			for(int j = 0; j < taillePlateau; j++) {
 				IG.changerPiecePlateau(i, j, 2, 0);
 			}
 		}
@@ -50,8 +52,8 @@ public class MaDemoIG {
 		// Les objets sont répartis sur le plateau dans l'ordre, l'objet 0 sur la première case, l'objet 1 sur la deuxième case, ...
 		int c = 0;
 		for(int i = 0; i <= 17; i++) {
-			int l = i / 7;
-			if(c >= 7) {
+			int l = i / taillePlateau;
+			if(c >= taillePlateau) {
 				c = 0;
 			}
 			IG.placerObjetPlateau(i, l, c);
@@ -75,6 +77,137 @@ public class MaDemoIG {
 		IG.afficherMessage(message);
 		IG.miseAJourAffichage();
 		IG.attendreClic();
+		
+		
+		
+		//3: Après click 1
+		for(int i = 0; i <= taillePlateau - 1; i++) {
+			for(int j = 0; j < taillePlateau; j++) {
+				IG.changerPiecePlateau(i, j, 2, 1);
+			}
+		}
+		IG.changerPieceHorsPlateau(1, 1);
+		
+		IG.placerJoueurPrecis(0, 3, 0, 1, 1);
+		IG.placerJoueurPrecis(1, 3, 6, 1, 1);
+		
+		IG.placerBilleSurPlateau(3, 0, 1, 0, 0);
+		IG.placerBilleSurPlateau(3, 6, 1, 2, 0);
+		
+		IG.enleverObjetPlateau(0, 0);
+		
+		String message1[]={
+				"",
+				"Après le clic 1",
+				"Cliquez pour continuer …",
+				""
+		};
+		IG.afficherMessage(message1);
+		IG.miseAJourAffichage();
+		IG.attendreClic();
+		
+		//3: Après click 2
+		for(int i = 0; i <= taillePlateau - 1; i++) {
+			for(int j = 0; j < taillePlateau; j++) {
+				IG.changerPiecePlateau(i, j, 2, 2);
+			}
+		}
+		IG.changerPieceHorsPlateau(1, 2);
+		
+		IG.placerJoueurPrecis(0, 3, 0, 1, 2);
+		IG.placerJoueurPrecis(1, 3, 6, 1, 0);
+		
+		IG.placerBilleSurPlateau(3, 0, 1, 1, 0);
+		IG.placerBilleSurPlateau(3, 6, 1, 1, 0);
+		
+		IG.enleverObjetPlateau(0, 1);
+		
+		String message2[]={
+				"",
+				"Après le clic 2",
+				"Cliquez pour continuer …",
+				""
+		};
+		IG.afficherMessage(message2);
+		IG.miseAJourAffichage();
+		IG.attendreClic();
+		
+		//3: Après click 3
+		for(int i = 0; i <= taillePlateau - 1; i++) {
+			for(int j = 0; j < taillePlateau; j++) {
+				IG.changerPiecePlateau(i, j, 2, 3);
+			}
+		}
+		IG.changerPieceHorsPlateau(1, 3);
+		
+		IG.placerJoueurPrecis(0, 3, 1, 1, 0);
+		IG.placerJoueurPrecis(1, 3, 5, 1, 2);
+		
+		IG.placerBilleSurPlateau(3, 0, 1, 2, 0);
+		IG.placerBilleSurPlateau(3, 6, 1, 0, 0);
+		
+		IG.enleverObjetPlateau(0, 2);
+		
+		String message3[]={
+				"",
+				"Après le clic 3",
+				"Cliquez pour continuer …",
+				""
+		};
+		IG.afficherMessage(message3);
+		IG.miseAJourAffichage();
+		IG.attendreClic();
+		
+		//3: Après click 4
+		for(int i = 0; i <= taillePlateau - 1; i++) {
+			for(int j = 0; j < taillePlateau; j++) {
+				IG.changerPiecePlateau(i, j, 2, 0);
+			}
+		}
+		IG.changerPieceHorsPlateau(1, 0);
+		
+		IG.placerJoueurPrecis(0, 3, 1, 1, 1);
+		IG.placerJoueurPrecis(1, 3, 5, 1, 1);
+		
+		IG.placerBilleSurPlateau(3, 1, 1, 0, 0);
+		IG.placerBilleSurPlateau(3, 5, 1, 2, 0);
+		
+		IG.enleverObjetPlateau(0, 3);
+		
+		String message4[]={
+				"",
+				"Après le clic 4",
+				"Cliquez pour continuer …",
+				""
+		};
+		IG.afficherMessage(message4);
+		IG.miseAJourAffichage();
+		IG.attendreClic();
+		
+		IG.afficherGagnant(0);
+		String message5[]={
+				"",
+				"Cliquez sur une flèche",
+				"pour quitter !",
+				""
+		};
+		IG.afficherMessage(message5);
+		IG.miseAJourAffichage();
+		
+		int entree=IG.attendreChoixEntree();
+		System.out.println(entree);
+		
+		String message6[]={
+				"",
+				"Arrêt du programme",
+				"dans 2 secondes !",
+				""
+		};
+		IG.afficherMessage(message6);
+		IG.miseAJourAffichage();
+		IG.pause(2000);
+		IG.fermerFenetreJeu();
+		System.exit(0);
 	}
 
 }
