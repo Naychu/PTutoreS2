@@ -1,5 +1,8 @@
 package composants;
 
+import grafix.interfaceGraphique.IG;
+import java.util.Random;
+
 /**
  * 
  * Cette classe permet de représenter les différentes pièces du jeu.
@@ -41,8 +44,7 @@ abstract public class Piece {
 	 * Méthode permettant de rotationner une pièce dans le sens d'une horloge.
 	 */
 	public void rotation(){
-		
-		// A Compléter
+		IG.changerPiecePlateau(random(1, 7),random(1, 7) , modelePiece, 1);
 		
 	}
 	
@@ -64,7 +66,7 @@ abstract public class Piece {
 	 */
 	public int getModelePiece() {
 		// A Modifier !!!
-		return -1;
+		return modelePiece;
 	}
 
 	/**
@@ -75,7 +77,7 @@ abstract public class Piece {
 	 */
 	public int getOrientationPiece() {
 		// A Modifier !!!
-		return -1;
+		return orientationPiece;
 	}
 
 	/**
@@ -109,4 +111,10 @@ abstract public class Piece {
 	 * @return Une copie de la pièce.
 	 */
 	public abstract Piece copy();
+	
+	public int random(int min, int max) {
+		Random random = new Random();
+		int value = random.nextInt(max - min) + min;
+		return value;
+	}
 }
