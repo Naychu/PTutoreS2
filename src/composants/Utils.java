@@ -13,36 +13,36 @@ public class Utils {
 	private static Random generateur=new Random((new Date().getTime()));
 
 	/**
-	 * A Faire (Quand Qui Statut)
+	 * A Faire (10/05/21 JC Finalisé)
 	 * 
-	 * MÃ©thode permettant de gÃ©nÃ©rer alÃ©atoirement un nombre entier.
+	 * Méthode permettant de générer aléatoirement un nombre entier.
 	 * 
-	 * @param max Le nombre entier maximal pouvant Ãªtre retournÃ©.
+	 * @param max Le nombre entier maximal pouvant être retourné.
 	 * @return Un nombre entier compris entre 0 et max (inclus).
 	 */
 	public static int genererEntier(int max){
-		// A Modifier !!!
-		return -1;
+		return generateur.nextInt(max);
 	}
 	/**
-	 * A Faire (Quand Qui Statut)
+	 * A Faire (10/05/21 JC Finalisé)
 	 * 
-	 * MÃ©thode permettant de gÃ©nÃ©rer un tableau d'entiers dont la longueur longTab est donnÃ©e en paramÃ¨tre.
-	 * Le tableau gÃ©nÃ©rÃ© doit contenir chaque entier compris entre 0 et longTab-1. La position de ces entiers
-	 * dans le tableau doit Ãªtre alÃ©atoire.
+	 * Méthode permettant de générer un tableau d'entiers dont la longueur longTab est donnée en paramètre.
+	 * Le tableau généré doit contenir chaque entier compris entre 0 et longTab-1. La position de ces entiers
+	 * dans le tableau doit être aléatoire.
 	 * 
 	 * @param longTab La longueur du tableau.
-	 * @return Un tableau contenant les entiers 0,...,longTab-1 placÃ©s alÃ©atoirement dans le tableau.
+	 * @return Un tableau contenant les entiers 0,...,longTab-1 placés aléatoirement dans le tableau.
 	 */
 	public static int[] genereTabIntAleatoirement(int longTab){
-		int tab[]=null;
-		
-		// A ComplÃ©ter !!!
+		int tab[] = new int[longTab];
+		for (int i = 0; i <= longTab-1; i++) {
+            tab[i] = genererEntier(18);
+        }
 		
 		return tab;
 	}
 	/**
-	 * Programme testant la mÃ©thode genereTabIntAleatoirement.
+	 * Programme testant la méthode genereTabIntAleatoirement.
 	 * @param args arguments du programme
 	 */
 	public static void main(String[] args) {

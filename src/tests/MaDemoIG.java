@@ -204,11 +204,11 @@ public class MaDemoIG {
 				"dans 2 secondes !",
 				""
 		};
+		
 		IG.afficherMessage(message6);
 		IG.miseAJourAffichage();
 		IG.pause(2000);
 		IG.fermerFenetreJeu();
 		System.exit(0);
 	}
-
 }
