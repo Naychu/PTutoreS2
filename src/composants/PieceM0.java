@@ -14,7 +14,7 @@ public class PieceM0 extends Piece {
 	 */
 	public PieceM0() {
 		// A Modifier !!!
-		super(-1,false,false,false,false); 
+		super(0,false,false,false,false); 
 	}
 	/**
 	 * A Faire (Quand Qui Statut)
