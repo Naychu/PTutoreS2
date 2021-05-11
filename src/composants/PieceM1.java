@@ -8,23 +8,21 @@ package composants;
 public class PieceM1 extends Piece {
 
 	/**
-	 * A Faire (Quand Qui Statut)
+	 * A Faire (11/05/2021 CG Finie)
 	 * 
 	 * Constructeur permettant de construire une pièce de modèle 1 et d'orientation 0.
 	 */
 	public PieceM1() {
-		// A Modifier !!!
-		super(-1,false,false,false,false); 
+		super(-1,true,false,true,false); 
 	}
 	/**
-	 * A Faire (Quand Qui Statut)
+	 * A Faire (11/05/2021 CG Finie)
 	 * 
 	 * Méthode permettant de créer une copie de la pièce (un nouvelle objet Java).
 	 * @return Une copie de la pièce.
 	 */
 	public Piece copy(){
-		Piece piece=null;
-		// A Compléter
+		Piece piece=new PieceM1(); 
 		return piece;
 	}
 }
