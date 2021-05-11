@@ -130,7 +130,8 @@ abstract public class Piece {
             pieces[i] = new PieceM0();
         }
         for (int i = 20; i<= 32 ; i++) {
-            pieces[i] = new PieceM1();
+            Piece p = new PieceM1();
+        	pieces[i] = p;
         }
         for (int i = 32; i<= 50 ; i++) {
             pieces[i] = new PieceM2();
