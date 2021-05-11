@@ -127,13 +127,13 @@ abstract public class Piece {
 		Piece pieces[]=null;
 		// A Compléter (A Faire après les classes PieceM0, PieceM1 et PieceM2)
 		for (int i = 0; i<= 20 ; i++) {
-            //pieces = new int[modelePiece(0)];
+            pieces[i] = new PieceM0();
         }
-        for (int i = 0; i<= 12 ; i++) {
-            //pieces = new int[modelePiece(1)];
+        for (int i = 20; i<= 32 ; i++) {
+            pieces[i] = new PieceM1();
         }
-        for (int i = 0; i<= 18 ; i++) {
-            //pieces = new int[modelePiece(2)];
+        for (int i = 32; i<= 50 ; i++) {
+            pieces[i] = new PieceM2();
         }
 		return pieces;
 	}
