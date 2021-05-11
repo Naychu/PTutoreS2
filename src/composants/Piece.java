@@ -1,8 +1,5 @@
 package composants;
 
-import grafix.interfaceGraphique.IG;
-import java.util.Random;
-
 /**
  * 
  * Cette classe permet de représenter les différentes pièces du jeu.
@@ -47,7 +44,33 @@ abstract public class Piece {
 	 * Méthode permettant de rotationner une pièce dans le sens d'une horloge.
 	 */
 	public void rotation(){
-		
+		// A Faire
+		if(modelePiece == 0) {
+			//if(pointsEntree[1] == true) {
+			//	pointsEntree[1] = false;
+			//	pointsEntree[2] = true;
+			//}
+			int u;
+			for(int i = 0; i <= pointsEntree.length; i++) {
+				if(i+1 >= pointsEntree.length) u = 0;
+				else u = i+1;
+				if(pointsEntree[i] == true && pointsEntree[u] == false) {
+					pointsEntree[i] = false;
+					pointsEntree[u] = true;
+				}
+			}
+		}
+		// Fini
+		else if(modelePiece == 1) {
+			for(int i = 0; i <= pointsEntree.length; i++) {
+				if(pointsEntree[i] == false) pointsEntree[i] = true;
+				else if(pointsEntree[i] == true) pointsEntree[i] = false;
+			}
+		}
+		// A Faire
+		else if(modelePiece == 2) {
+			
+		}
 		
 	}
 	
@@ -98,7 +121,7 @@ abstract public class Piece {
 	 * Méthode permettant de créer un tableau contenant toutes les pièces du jeu (les 50 pièces).
 	 * Le tableau contiendra 20 pièces du modèle 0, 12 pièces du modèle 1 et 18 pièces du modèle 2.
 	 * L'orientation de chaque pièce sera aléatoire.
-	 * @return Un tableau contenant toutes les piÃ¨ces du jeu.
+	 * @return Un tableau contenant toutes les pièces du jeu.
 	 */
 	public static Piece[] nouvellesPieces(){
 		Piece pieces[]=null;
@@ -116,14 +139,8 @@ abstract public class Piece {
 	}
 	
 	/**
-	 * MÃ©thode permettant de crÃ©er une copie de la piÃ¨ce (un nouvelle objet Java).
-	 * @return Une copie de la piÃ¨ce.
+	 * Méthode permettant de créer une copie de la pièce (un nouvelle objet Java).
+	 * @return Une copie de la pièce.
 	 */
 	public abstract Piece copy();
-	
-	public int random(int min, int max) {
-		Random random = new Random();
-		int value = random.nextInt(max - min) + min;
-		return value;
-	}
 }
