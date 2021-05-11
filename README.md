@@ -55,7 +55,7 @@ Si tu n'as pas configuré git sur ton dossier projet (`git init`), que tu n'es p
 
 Pour envoyer :
 1. Ajouter les modifications à partir de la racine du projet (`git add .`)
-3. Commente tes modifications (`git commit -m 'Ton commentaire'`)
+3. Commente tes modifications (`git commit -m "Ton commentaire"`)
 4. Publie vers la branche (`git push -u origin main`)
 
 Pour récupérer (`git pull origin main`)
