@@ -23,7 +23,15 @@ public class TestPieces {
 		IG.changerImageJoueur(2,((Integer)parametres[9]).intValue());
 
 		// 2. Une fois les paramètres saisis, le programme ouvrira la fenêtre de jeu avec une configuration initiale correspondant à un affichage par défaut sauf pour le message affiché qui sera "Cliquez pour continuer ...". Le programme attendra un clic de souris de l'utilisateur.
-		
+		String message[]={
+				"",
+				"Cliquez pour continuer …",
+				""
+		};
+		IG.afficherMessage(message);
+		IG.miseAJourAffichage();
+		IG.attendreClic();
 	}
+	
 
 }
