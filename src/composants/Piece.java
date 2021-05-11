@@ -15,7 +15,7 @@ abstract public class Piece {
 	private boolean[] pointsEntree; // Les points d'entrée indice 0 pour le haut, 1 pour la droite, 2 pour le bas et 3 pour la gauche.
 
 	/**
-	 * A Faire (Quand Qui Statut)
+	 * A Faire (11/05/2021 All Finalisé)
 	 * 
 	 * Constructeur permettant de créer une pièce d'un modèle avec l'orientation 0.
 	 * @param modelePiece Le modèle de la pièce.
@@ -26,8 +26,11 @@ abstract public class Piece {
 	 */
 	public Piece(int modelePiece,boolean pointEntreeHaut,boolean pointEntreeDroite,boolean pointEntreeBas,boolean pointEntreeGauche){
 		this.modelePiece = modelePiece;
-		
-		
+		this.orientationPiece = 0;
+		this.pointsEntree[0] = pointEntreeHaut;
+		this.pointsEntree[1] = pointEntreeDroite;
+		this.pointsEntree[2] = pointEntreeBas;
+		this.pointsEntree[3] = pointEntreeGauche;
 	}
 	
 	/**
@@ -44,12 +47,12 @@ abstract public class Piece {
 	 * Méthode permettant de rotationner une pièce dans le sens d'une horloge.
 	 */
 	public void rotation(){
-		IG.changerPiecePlateau(random(1, 7),random(1, 7) , modelePiece, 1);
+		
 		
 	}
 	
 	/**
-	 * A Faire (Quand Qui Statut)
+	 * A Faire (10/05/2021 JC Finalisé)
 	 * 
 	 * Méthode permettant d'orienter une pièce vers une orientation spécifique.
 	 * @param orientationPiece Un entier correspondant à la nouvelle orientation de la pièce.
@@ -59,37 +62,34 @@ abstract public class Piece {
 	}
 
 	/**
-	 * A Faire (Quand Qui Statut)
+	 * A Faire (11/05/2021 All Finalisé)
 	 * 
 	 * Méthode retournant le modèle de la pièce.
 	 * @return Un entier corrspondant au modèle de la pièce.
 	 */
 	public int getModelePiece() {
-		// A Modifier !!!
-		return modelePiece;
+		return this.modelePiece;
 	}
 
 	/**
-	 * A Faire (Quand Qui Statut)
+	 * A Faire (11/05/2021 All Finalisé)
 	 * 
 	 * Méthode retournant l'orientation de la pièce.
 	 * @return un entier retournant l'orientation de la pièce.
 	 */
 	public int getOrientationPiece() {
-		// A Modifier !!!
-		return orientationPiece;
+		return this.orientationPiece;
 	}
 
 	/**
-	 * A Faire (Quand Qui Statut)
+	 * A Faire (11/05/2021 JC Finalisé)
 	 * 
 	 * Méthode indiquant si il existe un point d'entrée à une certaine position (0: en haut, 1: à droite, 2: en bas, 3: à gauche).
 	 * @param pointEntree L'indice/la position du point d'entrée.
 	 * @return true si il y a un point d'entrée, sinon false.
 	 */
 	public boolean getPointEntree(int pointEntree){
-		// A compléter
-		return false;
+		return this.pointsEntree[pointEntree];
 	}
 	
 	/**
