@@ -36,7 +36,7 @@ public class Utils {
 	public static int[] genereTabIntAleatoirement(int longTab){
 		int tab[] = new int[longTab];
 		for (int i = 0; i <= longTab-1; i++) {
-            tab[i] = genererEntier(18);
+            tab[i] = genererEntier(longTab - 1);
         }
 		
 		return tab;

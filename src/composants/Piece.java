@@ -1,5 +1,7 @@
 package composants;
 
+import java.util.Random;
+
 /**
  * 
  * Cette classe permet de représenter les différentes pièces du jeu.
@@ -9,7 +11,7 @@ abstract public class Piece {
 
 	private int modelePiece; 		// Le modèle de la pièce
 	private int orientationPiece; 	// L'orientation de la pièce
-	private boolean[] pointsEntree; // Les points d'entrée indice 0 pour le haut, 1 pour la droite, 2 pour le bas et 3 pour la gauche.
+	private Boolean[] pointsEntree = new Boolean[4]; // Les points d'entrée indice 0 pour le haut, 1 pour la droite, 2 pour le bas et 3 pour la gauche.
 
 	/**
 	 * A Faire (11/05/2021 All Finalisé)
@@ -125,7 +127,7 @@ abstract public class Piece {
 	 * @return Un entier corrspondant au modèle de la pièce.
 	 */
 	public int getModelePiece() {
-		return this.modelePiece;
+		return modelePiece;
 	}
 
 	/**
@@ -135,7 +137,7 @@ abstract public class Piece {
 	 * @return un entier retournant l'orientation de la pièce.
 	 */
 	public int getOrientationPiece() {
-		return this.orientationPiece;
+		return orientationPiece;
 	}
 
 	/**
@@ -150,7 +152,7 @@ abstract public class Piece {
 	}
 	
 	/**
-	 * A Faire (08/05/21 CG EnCours)
+	 * A Faire (12/05/21 JC Finalisé)
 	 * 
 	 * Méthode permettant de créer un tableau contenant toutes les pièces du jeu (les 50 pièces).
 	 * Le tableau contiendra 20 pièces du modèle 0, 12 pièces du modèle 1 et 18 pièces du modèle 2.
@@ -158,17 +160,28 @@ abstract public class Piece {
 	 * @return Un tableau contenant toutes les pièces du jeu.
 	 */
 	public static Piece[] nouvellesPieces(){
-		Piece pieces[]=null;
+		Piece pieces[] = null;
 		// A Compléter (A Faire après les classes PieceM0, PieceM1 et PieceM2)
 		for (int i = 0; i<= 20 ; i++) {
             pieces[i] = new PieceM0();
+            
+            Random rand = new Random();
+			int r = rand.nextInt(3);
+            pieces[i].setOrientation(r);
         }
         for (int i = 20; i<= 32 ; i++) {
-            Piece p = new PieceM1();
-        	pieces[i] = p;
+        	pieces[i] = new PieceM1();
+        	
+        	Random rand = new Random();
+			int r = rand.nextInt(1);
+            pieces[i].setOrientation(r);
         }
         for (int i = 32; i<= 50 ; i++) {
             pieces[i] = new PieceM2();
+            
+            Random rand = new Random();
+			int r = rand.nextInt(3);
+            pieces[i].setOrientation(r);
         }
 		return pieces;
 	}
