@@ -160,7 +160,7 @@ abstract public class Piece {
 	 * @return Un tableau contenant toutes les pièces du jeu.
 	 */
 	public static Piece[] nouvellesPieces(){
-		Piece pieces[] = null;
+		Piece pieces[] = new Piece[51];
 		// A Compléter (A Faire après les classes PieceM0, PieceM1 et PieceM2)
 		for (int i = 0; i<= 20 ; i++) {
             pieces[i] = new PieceM0();

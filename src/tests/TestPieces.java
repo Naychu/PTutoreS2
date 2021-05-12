@@ -1,5 +1,6 @@
 package tests;
 
+import composants.Piece;
 import grafix.interfaceGraphique.IG;
 
 public class TestPieces {
@@ -32,8 +33,16 @@ public class TestPieces {
 		IG.miseAJourAffichage();
 		IG.attendreClic();
 		
-		
+		Piece[] pieces = Piece.nouvellesPieces();
+		int g = 0;
+		//for (int g = 0; g <= 49;g++) {
+		for(int i = 0; i <= taillePlateau - 1; i++) {
+			for(int j = 0; j < taillePlateau; j++) {
+				IG.changerPiecePlateau(i, j, pieces[g].getModelePiece(), pieces[g].getOrientationPiece());
+				
+			}
+			g = g + 1;
+		}
 	}
-	
-
+		
 }
