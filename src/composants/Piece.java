@@ -39,37 +39,71 @@ abstract public class Piece {
 	}
 	
 	/**
-	 * A Faire (Quand Qui Statut)
+	 * A Faire (12/05/2021 JC Finalisé)
 	 * 
 	 * Méthode permettant de rotationner une pièce dans le sens d'une horloge.
 	 */
 	public void rotation(){
-		// A Faire
+		// Fini (Méthode full conditions)
 		if(modelePiece == 0) {
-			//if(pointsEntree[1] == true) {
-			//	pointsEntree[1] = false;
-			//	pointsEntree[2] = true;
-			//}
-			int u;
-			for(int i = 0; i <= pointsEntree.length; i++) {
-				if(i+1 >= pointsEntree.length) u = 0;
-				else u = i+1;
-				if(pointsEntree[i] == true && pointsEntree[u] == false) {
-					pointsEntree[i] = false;
-					pointsEntree[u] = true;
-				}
+			if(pointsEntree[0] == true && pointsEntree[1] == true) {
+				pointsEntree[0] = false;
+				pointsEntree[1] = true;
+				pointsEntree[2] = true;
+				pointsEntree[3] = false;
+			}
+			else if(pointsEntree[1] == true && pointsEntree[2] == true) {
+				pointsEntree[0] = false;
+				pointsEntree[1] = false;
+				pointsEntree[2] = true;
+				pointsEntree[3] = true;
+			}
+			else if(pointsEntree[2] == true && pointsEntree[3] == true) {
+				pointsEntree[0] = true;
+				pointsEntree[1] = false;
+				pointsEntree[2] = false;
+				pointsEntree[3] = true;
+			}
+			else if(pointsEntree[3] == true && pointsEntree[0] == true) {
+				pointsEntree[0] = true;
+				pointsEntree[1] = true;
+				pointsEntree[2] = false;
+				pointsEntree[3] = false;
 			}
 		}
-		// Fini
+		// Fini (Opti)
 		else if(modelePiece == 1) {
 			for(int i = 0; i <= pointsEntree.length; i++) {
 				if(pointsEntree[i] == false) pointsEntree[i] = true;
 				else if(pointsEntree[i] == true) pointsEntree[i] = false;
 			}
 		}
-		// A Faire
+		// Fini (Méthode full conditions)
 		else if(modelePiece == 2) {
-			
+			if(pointsEntree[0] == true && pointsEntree[1] == true && pointsEntree[2] == true) {
+				pointsEntree[0] = false;
+				pointsEntree[1] = true;
+				pointsEntree[2] = true;
+				pointsEntree[3] = true;
+			}
+			else if(pointsEntree[1] == true && pointsEntree[2] == true && pointsEntree[3] == true) {
+				pointsEntree[0] = true;
+				pointsEntree[1] = false;
+				pointsEntree[2] = true;
+				pointsEntree[3] = true;
+			}
+			else if(pointsEntree[2] == true && pointsEntree[3] == true && pointsEntree[0] == true) {
+				pointsEntree[0] = true;
+				pointsEntree[1] = true;
+				pointsEntree[2] = false;
+				pointsEntree[3] = true;
+			}
+			else if(pointsEntree[3] == true && pointsEntree[0] == true && pointsEntree[1] == true) {
+				pointsEntree[0] = true;
+				pointsEntree[1] = true;
+				pointsEntree[2] = true;
+				pointsEntree[3] = false;
+			}
 		}
 		
 	}
