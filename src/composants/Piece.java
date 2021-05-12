@@ -11,7 +11,7 @@ abstract public class Piece {
 
 	private int modelePiece; 		// Le modèle de la pièce
 	private int orientationPiece; 	// L'orientation de la pièce
-	private Boolean[] pointsEntree = new Boolean[4]; // Les points d'entrée indice 0 pour le haut, 1 pour la droite, 2 pour le bas et 3 pour la gauche.
+	private boolean[] pointsEntree = new boolean[4]; // Les points d'entrée indice 0 pour le haut, 1 pour la droite, 2 pour le bas et 3 pour la gauche.
 
 	/**
 	 * A Faire (11/05/2021 All Finalisé)
@@ -47,64 +47,82 @@ abstract public class Piece {
 	 */
 	public void rotation(){
 		// Fini (Méthode full conditions)
-		if(modelePiece == 0) {
-			if(pointsEntree[0] == true && pointsEntree[1] == true) {
+		if(getModelePiece() == 0) {
+			if(getOrientationPiece() == 3) {
 				pointsEntree[0] = false;
 				pointsEntree[1] = true;
 				pointsEntree[2] = true;
 				pointsEntree[3] = false;
+				setOrientation(0);
 			}
-			else if(pointsEntree[1] == true && pointsEntree[2] == true) {
+			else if(getOrientationPiece() == 0) {
 				pointsEntree[0] = false;
 				pointsEntree[1] = false;
 				pointsEntree[2] = true;
 				pointsEntree[3] = true;
+				setOrientation(1);
 			}
-			else if(pointsEntree[2] == true && pointsEntree[3] == true) {
+			else if(getOrientationPiece() == 1) {
 				pointsEntree[0] = true;
 				pointsEntree[1] = false;
 				pointsEntree[2] = false;
 				pointsEntree[3] = true;
+				setOrientation(2);
 			}
-			else if(pointsEntree[3] == true && pointsEntree[0] == true) {
+			else if(getOrientationPiece() == 2) {
 				pointsEntree[0] = true;
 				pointsEntree[1] = true;
 				pointsEntree[2] = false;
 				pointsEntree[3] = false;
+				setOrientation(3);
 			}
 		}
-		// Fini (Opti)
+		// Fini (Méthode full conditions)
 		else if(modelePiece == 1) {
-			for(int i = 0; i <= pointsEntree.length; i++) {
-				if(pointsEntree[i] == false) pointsEntree[i] = true;
-				else if(pointsEntree[i] == true) pointsEntree[i] = false;
+			if(getOrientationPiece() == 0) {
+				pointsEntree[0] = false;
+				pointsEntree[1] = true;
+				pointsEntree[2] = false;
+				pointsEntree[3] = true;
+				setOrientation(1);
+			}
+			else if(getOrientationPiece() == 1) {
+				pointsEntree[0] = true;
+				pointsEntree[1] = false;
+				pointsEntree[2] = true;
+				pointsEntree[3] = false;
+				setOrientation(0);
 			}
 		}
 		// Fini (Méthode full conditions)
 		else if(modelePiece == 2) {
-			if(pointsEntree[0] == true && pointsEntree[1] == true && pointsEntree[2] == true) {
+			if(getOrientationPiece() == 1) {
 				pointsEntree[0] = false;
 				pointsEntree[1] = true;
 				pointsEntree[2] = true;
 				pointsEntree[3] = true;
+				setOrientation(2);
 			}
-			else if(pointsEntree[1] == true && pointsEntree[2] == true && pointsEntree[3] == true) {
+			else if(getOrientationPiece() == 2) {
 				pointsEntree[0] = true;
 				pointsEntree[1] = false;
 				pointsEntree[2] = true;
 				pointsEntree[3] = true;
+				setOrientation(3);
 			}
-			else if(pointsEntree[2] == true && pointsEntree[3] == true && pointsEntree[0] == true) {
+			else if(getOrientationPiece() == 3) {
 				pointsEntree[0] = true;
 				pointsEntree[1] = true;
 				pointsEntree[2] = false;
 				pointsEntree[3] = true;
+				setOrientation(0);
 			}
-			else if(pointsEntree[3] == true && pointsEntree[0] == true && pointsEntree[1] == true) {
+			else if(getOrientationPiece() == 0) {
 				pointsEntree[0] = true;
 				pointsEntree[1] = true;
 				pointsEntree[2] = true;
 				pointsEntree[3] = false;
+				setOrientation(1);
 			}
 		}
 		

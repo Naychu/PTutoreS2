@@ -4,10 +4,11 @@ import composants.Piece;
 import grafix.interfaceGraphique.IG;
 
 public class TestPieces {
+	private static Piece[] pieces = Piece.nouvellesPieces();
+	private static int taillePlateau = 7;
 
 	public static void main(String[] args) {
 		// 1. Dans un premier temps, les paramètres du jeu seront saisis. Dans la suite nous supposerons que les paramètres par défaut ont été saisis par l'utilisateur.
-		int taillePlateau = 7;
 		
 		Object parametres[];
 		parametres=IG.saisirParametres();
@@ -34,77 +35,54 @@ public class TestPieces {
 		IG.attendreClic();
 		
 		// 3. Puis, le programme générera à l'aide de la méthode Piece.nouvellesPieces un tableau de 50 pièces. Les 49 premières pièces de ce tableau seront disposées sur le plateau dans l'ordre (la première pièce sera placée sur la première case de la première ligne, la deuxième pièce sera placée sur la deuxième case de la première ligne, ...). La dernière pièce du tableau (celle à l'indice 49) sera placée dans l'emplacement de la fenêtre correspondant à la pièce hors du plateau. Le programme affichera cette nouvelle configuration dans la fenêtre de jeu et attendra de nouveau un clic de l'utilisateur.
-		Piece[] pieces = Piece.nouvellesPieces();
-		int g = 0;
-		//for (int g = 0; g <= 49;g++) {
-		for(int i = 0; i <= taillePlateau - 1; i++) {
-			for(int j = 0; j < taillePlateau; j++) {
-				IG.changerPiecePlateau(i, j, pieces[g].getModelePiece(), pieces[g].getOrientationPiece());
-				g = g + 1;
-				
-			}
-		}
-		IG.changerPieceHorsPlateau(pieces[49].getModelePiece(), pieces[49].getOrientationPiece());
+		updatePieces();
 		
 		IG.miseAJourAffichage();
 		IG.attendreClic();
 		
 		// 4. Dans la suite de l'exécution du programme, l'utilisateur cliquera 4 fois. Après chaque clic, l'ensemble des pièces du tableau sont rotationnées puis de nouveau affichées. De plus, la représentation sous forme de chaîne de caractères de la pièce hors plateau est affichée dans la console après chaque clic. Le programme s'arrêtera après un cinquième clic de l'utilisateur.
-		int z = 0;
-		while (z <= 51) {
-			pieces[z].rotation();
-			z++;
-		}
-		int k = 0;
-		for(int i = 0; i <= taillePlateau - 1; i++) {
-			for(int j = 0; j < taillePlateau; j++) {
-				IG.changerPiecePlateau(i, j, pieces[k].getModelePiece(), pieces[k].getOrientationPiece());
-				k = k + 1;
-				
-			}
-		}
+		for(int i = 0; i <= pieces.length - 1; i++) pieces[i].rotation();
+		updatePieces();
+		System.out.println(pieces[50]);
 		
 		IG.miseAJourAffichage();
 		IG.attendreClic();
 		
-		for(int i = 0; i <= pieces.length; i++) pieces[i].rotation();
-		int m = 0;
-		for(int i = 0; i <= taillePlateau - 1; i++) {
-			for(int j = 0; j < taillePlateau; j++) {
-				IG.changerPiecePlateau(i, j, pieces[m].getModelePiece(), pieces[m].getOrientationPiece());
-				m = m + 1;
-				
-			}
-		}
+		for(int i = 0; i <= pieces.length - 1; i++) pieces[i].rotation();
+		updatePieces();
+		System.out.println(pieces[50]);
 		
 		IG.miseAJourAffichage();
 		IG.attendreClic();
 		
-		for(int i = 0; i <= pieces.length; i++) pieces[i].rotation();
-		int n = 0;
-		for(int i = 0; i <= taillePlateau - 1; i++) {
-			for(int j = 0; j < taillePlateau; j++) {
-				IG.changerPiecePlateau(i, j, pieces[n].getModelePiece(), pieces[n].getOrientationPiece());
-				n = n + 1;
-				
-			}
-		}
+		for(int i = 0; i <= pieces.length - 1; i++) pieces[i].rotation();
+		updatePieces();
+		System.out.println(pieces[50]);
 		
 		IG.miseAJourAffichage();
 		IG.attendreClic();
 		
-		for(int i = 0; i <= pieces.length; i++) pieces[i].rotation();
-		int b = 0;
-		for(int i = 0; i <= taillePlateau - 1; i++) {
-			for(int j = 0; j < taillePlateau; j++) {
-				IG.changerPiecePlateau(i, j, pieces[b].getModelePiece(), pieces[b].getOrientationPiece());
-				b = b + 1;
-				
-			}
-		}
+		for(int i = 0; i <= pieces.length - 1; i++) pieces[i].rotation();
+		updatePieces();
+		System.out.println(pieces[50]);
 		
 		IG.miseAJourAffichage();
 		IG.attendreClic();
+		
+		IG.fermerFenetreJeu();
+		System.exit(0);
 	}
+	
+	public static void updatePieces() {
+		int g = 0;
+		for(int i = 0; i <= taillePlateau - 1; i++) {
+			for(int j = 0; j < taillePlateau; j++) {
+				IG.changerPiecePlateau(i, j, pieces[g].getModelePiece(), pieces[g].getOrientationPiece());
+				g = g + 1;
+			}
+		}
+		IG.changerPieceHorsPlateau(pieces[50].getModelePiece(), pieces[49].getOrientationPiece());
+	}
+	
 		
 }
