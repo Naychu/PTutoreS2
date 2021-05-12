@@ -13,7 +13,7 @@ public class PieceM2 extends Piece {
 	 * Constructeur permettant de construire une pièce de modèle 2 et d'orientation 0.
 	 */
 	public PieceM2() {
-		super(-1,true,true,false,true); 
+		super(2,true,true,false,true); 
 	}
 	/**
 	 * A Faire (11/05/2021 CG Finie)

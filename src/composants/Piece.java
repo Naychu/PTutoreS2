@@ -162,25 +162,25 @@ abstract public class Piece {
 	public static Piece[] nouvellesPieces(){
 		Piece pieces[] = new Piece[51];
 		// A Compléter (A Faire après les classes PieceM0, PieceM1 et PieceM2)
-		for (int i = 0; i<= 20 ; i++) {
+		for (int i = 0; i<= 19 ; i++) {
             pieces[i] = new PieceM0();
             
             Random rand = new Random();
-			int r = rand.nextInt(3);
+			int r = rand.nextInt(4);
             pieces[i].setOrientation(r);
         }
-        for (int i = 20; i<= 32 ; i++) {
+        for (int i = 20; i<= 31 ; i++) {
         	pieces[i] = new PieceM1();
         	
         	Random rand = new Random();
-			int r = rand.nextInt(1);
+			int r = rand.nextInt(2);
             pieces[i].setOrientation(r);
         }
         for (int i = 32; i<= 50 ; i++) {
             pieces[i] = new PieceM2();
             
             Random rand = new Random();
-			int r = rand.nextInt(3);
+			int r = rand.nextInt(4);
             pieces[i].setOrientation(r);
         }
 		return pieces;
