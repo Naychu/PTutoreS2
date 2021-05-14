@@ -43,39 +43,40 @@ public class Objet {
 
 	/**
 	 * 
-	 * A Faire (Quand Qui Statut)
+	 * A Faire (14/05/2020 CG Finie)
 	 * 
 	 * Méthode retournant le numéro de l'objet.
 	 * 
 	 * @return Le numéro de l'objet.
 	 */
 	public int getNumeroObjet() {
-		return -1; // A Modifier
+		return numObjet; // A Modifier
 	}
 
 
 	/**
 	 * 
-	 * A Faire (Quand Qui Statut)
+	 * A Faire (14/05/2020 CG Finie)
 	 * 
 	 * Méthode retournant le numéro de la ligne sur laquelle se trouve l'objet.
 	 * 
 	 * @return Le numéro de la ligne sur laquelle se trouve l'objet.
 	 */
 	public int getPosLignePlateau() {
-		return -1; // A Modifier
+		return posLignePlateau; // A Modifier
 	}
 
 	/**
 	 * 
-	 * A Faire (Quand Qui Statut)
+	 * A Faire (14/05/2020 CG Finie)
+	 *
 	 * 
 	 * Méthode retournant le numéro de la colonne sur laquelle se trouve l'objet.
 	 * 
 	 * @return Le numéro de la colonne sur laquelle se trouve l'objet.
 	 */
 	public int getPosColonnePlateau() {
-		return -1; // A Modifier
+		return posColonnePlateau; // A Modifier
 	}
 	
 	
