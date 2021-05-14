@@ -113,6 +113,16 @@ public class Objet {
 	 * @return true si l'objet est sur le plateau, false sinon.
 	 */
 	public boolean surPlateau() {
+		for ( int i = 0;i<=getPosLignePlateau(); i++) {
+			for ( int j = 0 ;j<=getPosLignePlateau(); j++ ) { 
+				if (getNumeroObjet()== i) {
+					if (getNumeroObjet()== i) {
+						return true;
+						}
+					}
+				}
+			}
+		
 		return false; // A Modifier
 	}
 
