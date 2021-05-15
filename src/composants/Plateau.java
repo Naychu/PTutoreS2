@@ -1,5 +1,7 @@
 package composants;
 
+import java.util.Random;
+
 /**
  * Cette classe permet de gérer un plateau de jeu constitué d'une grille de pièces (grille de 7 lignes sur 7 colonnes).
  *
@@ -53,7 +55,7 @@ public class Plateau {
 
 	/**
 	 * 
-	 * A Faire (Quand Qui Statut)
+	 * A Faire (15/05/2021 TG � v�rif)
 	 *  
 	 * Méthode permettant de placer aléatoirment 49 pièces du jeu sur le plateau.
 	 * L'orientation des pièces est aléatoire. Les pièces utilisées doivent être des nouvelles pièces générées à partir de la méthode Piece.nouvellesPieces.
@@ -62,9 +64,33 @@ public class Plateau {
 	 * @return La seule pièce qui n'a pas été placée sur le plateau
 	 */
 	public Piece placerPiecesAleatoierment(){
-		// A Compléter
-		return null; // A Modfier
+		Piece pieces[] = new Piece[51];
+		// A Compl�ter (A Faire apr�s les classes PieceM0, PieceM1 et PieceM2)
+		for (int i = 0; i<= 19 ; i++) {
+            pieces[i] = new PieceM0();
+            
+            Random rand = new Random();
+			int r = rand.nextInt(4);
+            pieces[i].setOrientation(r);
+        }
+        for (int i = 20; i<= 31 ; i++) {
+        	pieces[i] = new PieceM1();
+        	
+        	Random rand = new Random();
+			int r = rand.nextInt(2);
+            pieces[i].setOrientation(r);
+        }
+        for (int i = 32; i<= 50 ; i++) {
+            pieces[i] = new PieceM2();
+            
+            Random rand = new Random();
+			int r = rand.nextInt(4);
+            pieces[i].setOrientation(r);
+        }
+		return pieces[51];
 	}
+		
+
 
 	/**
 	 * 
@@ -90,7 +116,7 @@ public class Plateau {
 
 	/**
 	 * 
-	 * A Faire (Quand Qui Statut)
+	 * A Faire (15/05/2021 TG � termin�)
 	 * 
 	 * Méthode permettant de tester si les positions passées en paramètre sont les positions de deux cases différentes et adjacentes 
 	 * de la grille de jeu et qu'il est possible de passer d'une cas à l'autre compte tenu des deux pièces posées sur les deux cases du plateau.
@@ -102,9 +128,11 @@ public class Plateau {
 	 * @return true si les positions passées en paramètre sont les positions de deux cases différentes et adjacentes de la grille de jeu et qu'il est possible de passer d'une cas à l'autre compte tenu des deux pièces posées sur les deux cases du plateau, false sinon.
 	 */
 	private boolean passageEntreCases(int posLigCase1,int posColCase1,int posLigCase2,int posColCase2){
-		
-		// A Compléter
-		
+		if(posLigCase1 != posLigCase2 && posColCase1 != posColCase2 ) {
+			if (casesAdjacentes(posLigCase1, posColCase1, posLigCase2, posColCase2)==true) {
+				
+			}
+		}
 		return false; // A Modifier
 	}
 
