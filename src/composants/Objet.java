@@ -8,8 +8,8 @@ package composants;
 public class Objet {
 
 	private int numObjet; // Le numéro de l'objet (un entier entre 0 et 17).
-	private int posLignePlateau; // La ligne du plateau sur laquelle est éventuellement posé l'objet (un entier entre -1 et 6, -1:lorsqu'il n'est pas sur le plateau).
-	private int posColonnePlateau; // La colonne du plateau sur laquelle est éventuellement posé l'objet (un entier entre -1 et 6, -1:lorsqu'il n'est pas sur le plateau).
+	private static int posLignePlateau; // La ligne du plateau sur laquelle est éventuellement posé l'objet (un entier entre -1 et 6, -1:lorsqu'il n'est pas sur le plateau).
+	private static int posColonnePlateau; // La colonne du plateau sur laquelle est éventuellement posé l'objet (un entier entre -1 et 6, -1:lorsqu'il n'est pas sur le plateau).
 	private boolean surPlateau; // Indique si l'objet est sur le plateau ou non (true : sur le plateau, false : hors du plateau).
 
 	/**
@@ -26,7 +26,7 @@ public class Objet {
 
 	/**
 	 * 
-	 *  (15/05 MD En cours)
+	 *  (15/05 MD Termin�)
 	 * 
 	 * Méthode permettant de générer un tableau contenant les 18 objets du jeu.
 	 * Les objets seront postionnées aléatoirement sur le plateau.  Deux objets ne pourront pas être sur une même case (même ligne et même colonne).
@@ -36,13 +36,13 @@ public class Objet {
 	 */
 	public static Objet[] nouveauxObjets(){
 		Objet objets[]= new Objet[19];
-		for(int i=0;i<=getPosLignePlateau();i++) {
-			for(int j=0;i<=getPosColonnePlateau();j++) {
+		for(int i=0;i<= posLignePlateau ;i++) {
+			for(int j=0;i<=posColonnePlateau;j++) {
 				if(objets[i]==objets[j]) {
-					return false;
+					return null;
 				}
 				else {
-					objets.append(nouveauxObjets());
+					objets[posLignePlateau][posColonnePlateau]=nouveauxObjets();
 				}
 			}
 		}
