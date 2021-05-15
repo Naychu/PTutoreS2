@@ -13,7 +13,7 @@ public class Utils {
 	private static Random generateur=new Random((new Date().getTime()));
 
 	/**
-	 * A Faire (10/05/21 JC Finalisé)
+	 * (10/05/21 JC Finalisé)
 	 * 
 	 * Méthode permettant de générer aléatoirement un nombre entier.
 	 * 
@@ -24,7 +24,7 @@ public class Utils {
 		return generateur.nextInt(max);
 	}
 	/**
-	 * A Faire (10/05/21 JC Finalisé)
+	 *  (10/05/21 JC Finalisé)
 	 * 
 	 * Méthode permettant de générer un tableau d'entiers dont la longueur longTab est donnée en paramètre.
 	 * Le tableau généré doit contenir chaque entier compris entre 0 et longTab-1. La position de ces entiers

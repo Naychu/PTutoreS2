@@ -14,19 +14,19 @@ public class Objet {
 
 	/**
 	 * 
-	 * A Faire (Quand Qui Statut)
+	 * (14/05 MD Termin�)
 	 * 
 	 * Constructeur permettant de construire un objet qui est initialement hors du plateau.
 	 * 
 	 * @param numObjet Le numéro de l'objet.
 	 */
 	public Objet(int numObjet) {
-		// A Compléter
+		this.numObjet=numObjet;
 	}
 
 	/**
 	 * 
-	 * A Faire (Quand Qui Statut)
+	 *  (15/05 MD En cours)
 	 * 
 	 * Méthode permettant de générer un tableau contenant les 18 objets du jeu.
 	 * Les objets seront postionnées aléatoirement sur le plateau.  Deux objets ne pourront pas être sur une même case (même ligne et même colonne).
@@ -35,40 +35,50 @@ public class Objet {
 	 *
 	 */
 	public static Objet[] nouveauxObjets(){
-		Objet objets[]=null;
-		// A Compléter
+		Objet objets[]= new Objet[19];
+		for(int i=0;i<=getPosLignePlateau();i++) {
+			for(int j=0;i<=getPosColonnePlateau();j++) {
+				if(objets[i]==objets[j]) {
+					return false;
+				}
+				else {
+					objets.append(nouveauxObjets());
+				}
+			}
+		}
+				
 		return objets;
 	}
 
 
 	/**
 	 * 
-	 * A Faire (14/05/2020 CG Finie)
+	 *  (14/05/2021 CG Finie)
 	 * 
 	 * Méthode retournant le numéro de l'objet.
 	 * 
 	 * @return Le numéro de l'objet.
 	 */
 	public int getNumeroObjet() {
-		return numObjet; // A Modifier
+		return numObjet; 
 	}
 
 
 	/**
 	 * 
-	 * A Faire (14/05/2020 CG Finie)
+	 *  (14/05/2021 CG Finie)
 	 * 
 	 * Méthode retournant le numéro de la ligne sur laquelle se trouve l'objet.
 	 * 
 	 * @return Le numéro de la ligne sur laquelle se trouve l'objet.
 	 */
 	public int getPosLignePlateau() {
-		return posLignePlateau; // A Modifier
+		return posLignePlateau; 
 	}
 
 	/**
 	 * 
-	 * A Faire (14/05/2020 CG Finie)
+	 *  (14/05/2021 CG Finie)
 	 *
 	 * 
 	 * Méthode retournant le numéro de la colonne sur laquelle se trouve l'objet.
@@ -76,13 +86,13 @@ public class Objet {
 	 * @return Le numéro de la colonne sur laquelle se trouve l'objet.
 	 */
 	public int getPosColonnePlateau() {
-		return posColonnePlateau; // A Modifier
+		return posColonnePlateau; 
 	}
 	
 	
 	/**
 	 * 
-	 * A Faire (Quand Qui Statut)
+	 * (15/05 JC Fini)
 	 * 
 	 * Méthode permettant de positionner l'objet sur une ligne et une colonne données en paramètre.
 	 * 
@@ -90,18 +100,19 @@ public class Objet {
 	 * @param colonnePlateau Un entier compris entre 0 et 6.
 	 */
 	public void positionneObjet(int lignePlateau,int colonnePlateau){
-		// A Compléter
+		posLignePlateau=lignePlateau;
+		posColonnePlateau=colonnePlateau;
 	}
 
 	/**
 	 * 
-	 * A Faire (Quand Qui Statut)
+	 * (15/05 MD Fini)
 	 * 
 	 * Méthode permettant d'enlever l'objet du plateau.
 	 * 
 	 */
 	public void enleveDuPlateau(){
-		// A Compléter
+		surPlateau=false;
 	}
 	
 	/**
@@ -114,9 +125,9 @@ public class Objet {
 	 */
 	public boolean surPlateau() {
 		for ( int i = 0;i<=getPosLignePlateau(); i++) {
-			for ( int j = 0 ;j<=getPosLignePlateau(); j++ ) { 
+			for ( int j = 0 ;j<=getPosColonnePlateau(); j++ ) { 
 				if (getNumeroObjet()== i) {
-					if (getNumeroObjet()== i) {
+					if (getNumeroObjet()== j) {
 						return true;
 						}
 					}
