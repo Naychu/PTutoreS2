@@ -35,7 +35,7 @@ public class Objet {
 	 *
 	 */
 	public static Objet[] nouveauxObjets(){
-		Objet objets[]= new Objet[19];
+		Objet[] objets= new Objet[19];
 		for(int i=0;i<= posLignePlateau ;i++) {
 			for(int j=0;i<=posColonnePlateau;j++) {
 				if(objets[i]==objets[j]) {
