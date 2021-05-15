@@ -9,16 +9,21 @@ public class Plateau {
 	private Piece plateau[][]; // La grille des pièces.
 
 	/**
-	 * A Faire (Quand Qui Statut)
+	 * A Faire (15/05/2021 JC finalis�)
 	 * 
 	 * Constructeur permettant de construire un plateau vide (sans pièces) et d'une taille de 7 lignes sur 7 colonnes.
 	 */
 	public Plateau() {
-		// A Compléter
+		for(int i = 0; i <= 7 - 1; i++) {
+			for(int j = 0; j < 7 ; j++) {
+				plateau[i][j]=null;
+				
+			}
+		}
 	}
 
 	/**
-	 * A Faire (Quand Qui Statut)
+	 * A Faire (15/05/2021 TG finalis�)
 	 * 
 	 * Méthode permettant de placer une pièce sur le plateau.
 	 * 
@@ -27,11 +32,11 @@ public class Plateau {
 	 * @param colonnePlateau La colonne du plateau sur laquelle sera placée la pièce (une entier entre 0 et 6).
 	 */
 	public void positionnePiece(Piece piece,int lignePlateau,int colonnePlateau){
-		// A Compléter
+		plateau[lignePlateau][colonnePlateau]=piece;
 	}
 
 	/**
-	 * A Faire (Quand Qui Statut)
+	 * A Faire (15/05/2021 TG + aide de JC finalis�)
 	 * 
 	 * Méthode retournant une pièce se trouvant sur le plateau à un emplacement spécifique.
 	 * 
@@ -40,7 +45,10 @@ public class Plateau {
 	 * @return La pièce se trouvant sur la ligne lignePlateau et la colonne colonnePlateau. Si il n'y a pas de pièce, null est retourné.
 	 */
 	public Piece getPiece(int lignePlateau,int colonnePlateau){
-		return null; // A Modfier
+		if (plateau[lignePlateau][colonnePlateau]!=null) {
+			return plateau[lignePlateau][colonnePlateau];
+		}
+		return null;
 	}
 
 	/**
