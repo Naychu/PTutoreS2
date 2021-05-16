@@ -40,13 +40,8 @@ public class Objet {
 	 */
 	public static Objet[] nouveauxObjets(){
 		Objet objets[] = new Objet[19];
-		for (int i = 0; i<=19; i++) {
-			Random rand1 = new Random();
-			int l = rand1.nextInt(posLignePlateau);
-			Random rand2 = new Random();
-			int c = rand2.nextInt(posColonnePlateau);
-			objets[l] = new Objet(i);
-			objets[c] = new Objet(i);
+		for (int i = 0; i<=18; i++) {
+			objets[i] = new Objet(i);
 		}
 		return objets;
 	}
