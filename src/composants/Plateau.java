@@ -116,7 +116,7 @@ public class Plateau {
 
 	/**
 	 * 
-	 * A Faire (15/05/2021 TG � termin�)
+	 * A Faire (15/05/2021 TG et CG � verifier)
 	 * 
 	 * Méthode permettant de tester si les positions passées en paramètre sont les positions de deux cases différentes et adjacentes 
 	 * de la grille de jeu et qu'il est possible de passer d'une cas à l'autre compte tenu des deux pièces posées sur les deux cases du plateau.
@@ -127,13 +127,14 @@ public class Plateau {
 	 * @param posColCase2 Un entier quelconque.
 	 * @return true si les positions passées en paramètre sont les positions de deux cases différentes et adjacentes de la grille de jeu et qu'il est possible de passer d'une cas à l'autre compte tenu des deux pièces posées sur les deux cases du plateau, false sinon.
 	 */
-	private boolean passageEntreCases(int posLigCase1,int posColCase1,int posLigCase2,int posColCase2){
+	private boolean passageEntreCasesQQ(int posLigCase1,int posColCase1,int posLigCase2,int posColCase2){
 		if(posLigCase1 != posLigCase2 && posColCase1 != posColCase2 ) {
 			if (casesAdjacentes(posLigCase1, posColCase1, posLigCase2, posColCase2)==true) {
-				
+				return true;
 			}
 		}
-		return false; // A Modifier
+		return false;
+
 	}
 
 	/**
@@ -157,7 +158,7 @@ public class Plateau {
 	public int[][] calculeChemin(int posLigCaseDep,int posColCaseDep,int posLigCaseArr,int posColCaseArr){
 		int resultat[][]=null;
 		
-		// A Compléter
+		// A Compl�ter
 		
 		return resultat;
 	}

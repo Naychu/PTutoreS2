@@ -45,8 +45,8 @@ public class Objet {
 			int l = rand1.nextInt(posLignePlateau);
 			Random rand2 = new Random();
 			int c = rand2.nextInt(posColonnePlateau);
-			objets[i] = new Objet(c);
-			objets[i] = new Objet(l);
+			objets[l] = new Objet(i);
+			objets[c] = new Objet(i);
 		}
 		return objets;
 	}
@@ -134,7 +134,6 @@ public class Objet {
 					}
 				}
 			}
-		
 		return false; // A Modifier
 	}
 
