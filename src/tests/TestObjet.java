@@ -29,26 +29,40 @@ public class TestObjet {
 		IG.attendreClic();
 		
 		Objet[] t = Objet.nouveauxObjets();
-		int [] c2 = new int[19];
-		int [] l2 = new int[19];
-		boolean b = true;
+		int [] pos = new int[36];
+		boolean b = false;
 		int r = 0;
-		for (int i = 0; i <= 17;i++){
-			b = true;
+		int y = 0;
+
+		while(r < 18){
 			Random rand1 = new Random();
 			int l = rand1.nextInt(7);
 			int c = rand1.nextInt(7);
-			while (b == true) {
+			for ( int i = 0;i<pos.length-1;i+=2) {
+				if (pos[i]==l && pos[i+1] == c) {
+					b = true;
+				}
+			}
+			if ( b == false) {
+				IG.placerObjetPlateau(t[r].getNumeroObjet(),l,c);
+				pos[y*2]=l;
+				pos[y*2+1]=c;
+				y  +=1;
+				r +=1;
+			}
+			b = false;
+				
+			
+			/*while (b == true) {
 				for (int g = 0 ; g<= l2.length;g++ ) {
 					for (int j = 0 ; j<= c2.length;j++ ) {
 						if (l != g && c != g ){
-							IG.placerObjetPlateau(t[i].getNumeroObjet(),l,c);
-							c2[i] = c;
-							l2[i] = l;
-							System.out.println(g);
-							System.out.println("----");
-
 							b = false;
+							if (b == false) {
+								IG.placerObjetPlateau(t[i].getNumeroObjet(),l,c);
+								c2[i] = c;
+								l2[i] = l;
+							}
 						}
 					}				
 				}
@@ -58,11 +72,7 @@ public class TestObjet {
 					c = rand1.nextInt(7);	
 
 				}
-			}
-			System.out.println(l);
-			System.out.println(c);
-			System.out.println("______");
-			r = r + 1;
+			}*/
 
 		}
 		System.out.println(r);
