@@ -1,5 +1,9 @@
 package composants;
 
+import java.util.Random;
+
+import grafix.interfaceGraphique.IG;
+
 /**
  * 
  * Cette classe permet de représenter chacun des objets du jeu.
@@ -35,18 +39,15 @@ public class Objet {
 	 *
 	 */
 	public static Objet[] nouveauxObjets(){
-		Objet[] objets= new Objet[19];
-		for(int i=0;i<= posLignePlateau ;i++) {
-			for(int j=0;i<=posColonnePlateau;j++) {
-				if(objets[i]==objets[j]) {
-					return null;
-				}
-				else {
-					objets[posLignePlateau][posColonnePlateau]=nouveauxObjets();
-				}
-			}
+		Objet objets[] = new Objet[19];
+		for (int i = 0; i<=19; i++) {
+			Random rand1 = new Random();
+			int l = rand1.nextInt(posLignePlateau);
+			Random rand2 = new Random();
+			int c = rand2.nextInt(posColonnePlateau);
+			objets[i] = new Objet(c);
+			objets[i] = new Objet(l);
 		}
-				
 		return objets;
 	}
 
