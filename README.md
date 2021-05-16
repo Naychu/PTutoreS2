@@ -1,7 +1,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/HiYarlia/PTutoreS2">
+  <a href="https://github.com/Shuvly/PTutoreS2">
     <img src="https://user-images.githubusercontent.com/60405693/115529017-d8228d00-a292-11eb-876a-4957c63bdcdd.png" alt="Logo" width="180" height="80">
   </a>
 
@@ -51,7 +51,7 @@ Pour lancer le programme vous devez posséder Java 8+ JDK d'installé:
 ## Contribuer
 
 Les contributions à la repository permettent l'avancement du projet.
-Si tu n'as pas configuré git sur ton dossier projet (`git init`), que tu n'es pas connecté à la branche principale (`git branch -M main`) et que tu n'es pas connecté sur la repository (`git remote add origin https://github.com/HiYarlia/PTutoreS2.git`)
+Si tu n'as pas configuré git sur ton dossier projet (`git init`), que tu n'es pas connecté à la branche principale (`git branch -M main`) et que tu n'es pas connecté sur la repository (`git remote add origin https://github.com/Shuvly/PTutoreS2.git`)
 
 Pour envoyer :
 1. Ajouter les modifications à partir de la racine du projet (`git add .`)
