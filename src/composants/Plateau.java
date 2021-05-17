@@ -16,11 +16,7 @@ public class Plateau {
 	 * Constructeur permettant de construire un plateau vide (sans piÃ¨ces) et d'une taille de 7 lignes sur 7 colonnes.
 	 */
 	public Plateau() {
-		for(int i = 0; i <= 7 - 1; i++) {
-			for(int j = 0; j < 7 ; j++) {
-				plateau[i][j] = null;
-			}
-		}
+		this.plateau= new Piece[7][7];
 	}
 
 	/**
@@ -86,7 +82,7 @@ public class Plateau {
 			int r = rand.nextInt(4);
             pieces[i].setOrientation(r);
         }
-		return pieces[51];
+		return pieces[50];
 	}
 		
 
@@ -154,8 +150,10 @@ public class Plateau {
 	 */
 	public int[][] calculeChemin(int posLigCaseDep,int posColCaseDep,int posLigCaseArr,int posColCaseArr){
 		int resultat[][]=null;
+		while ((posLigCaseDep != posLigCaseArr) && (posColCaseDep != posColCaseArr)) {
+			
+		}
 		
-		// A Complèter
 		
 		return resultat;
 	}
