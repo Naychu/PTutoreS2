@@ -8,7 +8,7 @@ import java.util.Random;
  */
 public class Plateau {
 
-	private Piece plateau[][]; // La grille des piÃ¨ces.
+	private Piece plateau[][]; // La grille des pièces.
 
 	/**
 	 * A Faire (15/05/2021 JC finalisé)
@@ -18,8 +18,7 @@ public class Plateau {
 	public Plateau() {
 		for(int i = 0; i <= 7 - 1; i++) {
 			for(int j = 0; j < 7 ; j++) {
-				plateau[i][j]=null;
-				
+				plateau[i][j] = null;
 			}
 		}
 	}
