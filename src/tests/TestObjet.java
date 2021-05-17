@@ -9,7 +9,6 @@ public class TestObjet {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int taillePlateau = 7;
 		
 		Object parametres[];
 		parametres=IG.saisirParametres();

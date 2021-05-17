@@ -201,6 +201,16 @@ abstract public class Piece {
 			int r = rand.nextInt(4);
             pieces[i].setOrientation(r);
         }
+        
+        Random rnd = new Random();
+        for (int i = pieces.length - 1; i > 0; i--)
+        {
+          int index = rnd.nextInt(i + 1);
+          // Simple swap
+          Piece a = pieces[index];
+          pieces[index] = pieces[i];
+          pieces[i] = a;
+        }
 		return pieces;
 	}
 	

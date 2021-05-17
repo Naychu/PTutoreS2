@@ -50,38 +50,16 @@ public class Plateau {
 
 	/**
 	 * 
-	 * A Faire (15/05/2021 TG à vérif)
+	 * A Faire (15/05/2021 JC à vérif)
 	 *  
-	 * MÃ©thode permettant de placer alÃ©atoirment 49 piÃ¨ces du jeu sur le plateau.
-	 * L'orientation des piÃ¨ces est alÃ©atoire. Les piÃ¨ces utilisÃ©es doivent Ãªtre des nouvelles piÃ¨ces gÃ©nÃ©rÃ©es Ã  partir de la mÃ©thode Piece.nouvellesPieces.
-	 * Parmi les 50 piÃ¨ces du jeu, la piÃ¨ce qui n'a pas Ã©tÃ© placÃ©e sur le plateau est retournÃ©e par la mÃ©thode.
+	 * Méthode permettant de placer aléatoirment 49 pièces du jeu sur le plateau.
+	 * L'orientation des pièces est aléatoire. Les pièces utilisées doivent être des nouvelles pièces générées à partir de la méthode Piece.nouvellesPieces.
+	 * Parmi les 50 pièces du jeu, la pièce qui n'a pas été placée sur le plateau est retournée par la méthode.
 	 * 
-	 * @return La seule piÃ¨ce qui n'a pas Ã©tÃ© placÃ©e sur le plateau
+	 * @return La seule pièce qui n'a pas été placée sur le plateau
 	 */
 	public Piece placerPiecesAleatoierment(){
-		Piece pieces[] = new Piece[51];
-		// A Compléter (A Faire après les classes PieceM0, PieceM1 et PieceM2)
-		for (int i = 0; i<= 19 ; i++) {
-            pieces[i] = new PieceM0();
-            
-            Random rand = new Random();
-			int r = rand.nextInt(4);
-            pieces[i].setOrientation(r);
-        }
-        for (int i = 20; i<= 31 ; i++) {
-        	pieces[i] = new PieceM1();
-        	
-        	Random rand = new Random();
-			int r = rand.nextInt(2);
-            pieces[i].setOrientation(r);
-        }
-        for (int i = 32; i<= 50 ; i++) {
-            pieces[i] = new PieceM2();
-            
-            Random rand = new Random();
-			int r = rand.nextInt(4);
-            pieces[i].setOrientation(r);
-        }
+		Piece pieces[] = Piece.nouvellesPieces();
 		return pieces[50];
 	}
 		
