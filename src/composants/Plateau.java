@@ -127,11 +127,9 @@ public class Plateau {
 	 * @param posColCase2 Un entier quelconque.
 	 * @return true si les positions pass√©es en param√®tre sont les positions de deux cases diff√©rentes et adjacentes de la grille de jeu et qu'il est possible de passer d'une cas √† l'autre compte tenu des deux pi√®ces pos√©es sur les deux cases du plateau, false sinon.
 	 */
-	private boolean passageEntreCasesQQ(int posLigCase1,int posColCase1,int posLigCase2,int posColCase2){
-		if(posLigCase1 != posLigCase2 && posColCase1 != posColCase2 ) {
-			if (casesAdjacentes(posLigCase1, posColCase1, posLigCase2, posColCase2)==true) {
-				return true;
-			}
+	private boolean passageEntreCases(int posLigCase1,int posColCase1,int posLigCase2,int posColCase2){
+		if(posLigCase1 != posLigCase2 && posColCase1 != posColCase2) {
+			if (casesAdjacentes(posLigCase1, posColCase1, posLigCase2, posColCase2)==true) return true;
 		}
 		return false;
 
@@ -141,18 +139,18 @@ public class Plateau {
 	 * 
 	 * A Faire (Quand Qui Statut)
 	 * 
-	 * M√©thode permettant de retourner un √©ventuel chemin entre deux cases du plateau compte tenu des pi√®ces pos√©es sur le plateau.
-	 * Dans le cas o√π il n'y a pas de chemin entre les deux cases, la valeur null est retourn√©e.
-	 * Dans le cas o√π il existe un chemin, un chemin possible est retourn√© sous forme d'un tableau d'entiers √† deux dimensions.
-	 * La premi√®re dimension correspond aux cases du plateau √† emprunter pour aller de la case de d√©part √† la case d'arriv√©e.
-	 * Dans ce tableau, chaque case est un tableau de deux entiers avec le premier entier qui correspond √† la ligne de la case et
-	 * le second entier qui correspond √† la colonne de la case. La premi√®re case d'un chemin retourn√© correspond toujours 
-	 * √† la case (posLigCaseDep,posColCaseDep) et la derni√®re case correspond toujours √† la case (posLigCaseArr,posColCaseArr).
+	 * MÈthode permettant de retourner un Èventuel chemin entre deux cases du plateau compte tenu des piËces posÈes sur le plateau.
+	 * Dans le cas o˘ il n'y a pas de chemin entre les deux cases, la valeur null est retournÈe.
+	 * Dans le cas o˘ il existe un chemin, un chemin possible est retournÈ sous forme d'un tableau d'entiers ‡ deux dimensions.
+	 * La premiËre dimension correspond aux cases du plateau √† emprunter pour aller de la case de dÈpart ‡ la case d'arrivÈe.
+	 * Dans ce tableau, chaque case est un tableau de deux entiers avec le premier entier qui correspond ‡ la ligne de la case et
+	 * le second entier qui correspond ‡ la colonne de la case. La premiËre case d'un chemin retournÈ correspond toujours 
+	 * ‡ la case (posLigCaseDep,posColCaseDep) et la derniËre case correspond toujours ‡†la case (posLigCaseArr,posColCaseArr).
 	 *
-	 * @param posLigCaseDep La ligne de la case de d√©part (un entier compris entre 0 et 6).
-	 * @param posColCaseDep La colonne de la case de d√©part (un entier compris entre 0 et 6).
-	 * @param posLigCaseArr La ligne de la case d'arriv√©e (un entier compris entre 0 et 6).
-	 * @param posColCaseArr La colonne de la case d'arriv√©e (un entier compris entre 0 et 6).
+	 * @param posLigCaseDep La ligne de la case de dÈpart (un entier compris entre 0 et 6).
+	 * @param posColCaseDep La colonne de la case de dÈpart (un entier compris entre 0 et 6).
+	 * @param posLigCaseArr La ligne de la case d'arrivÈe (un entier compris entre 0 et 6).
+	 * @param posColCaseArr La colonne de la case d'arrivÈe (un entier compris entre 0 et 6).
 	 * @return null si il n'existe pas de chemin entre les deux case, un chemin sinon.
 	 */
 	public int[][] calculeChemin(int posLigCaseDep,int posColCaseDep,int posLigCaseArr,int posColCaseArr){
