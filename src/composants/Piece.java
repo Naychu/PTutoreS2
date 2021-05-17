@@ -203,7 +203,7 @@ abstract public class Piece {
         }
         
         
-        // Random list pieces
+        // Random list (pieces)
         Random rnd = new Random();
         for (int i = pieces.length - 1; i > 0; i--)
         {
