@@ -128,9 +128,15 @@ public class Plateau {
 	 */
 	public int[][] calculeChemin(int posLigCaseDep,int posColCaseDep,int posLigCaseArr,int posColCaseArr){
 		int resultat[][]=null;
-		while ((posLigCaseDep != posLigCaseArr) && (posColCaseDep != posColCaseArr)) {
-			
+		if (passageEntreCases(posLigCaseDep, posColCaseDep, posLigCaseArr, posColCaseArr)==true) {
+			while ((posLigCaseDep != posLigCaseArr) && (posColCaseDep != posColCaseArr)) {
+				
+			}
 		}
+			
+			
+		
+		
 		
 		
 		return resultat;
