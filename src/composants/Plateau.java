@@ -141,7 +141,22 @@ public class Plateau {
 		
 		return resultat;
 	}
-
+	/** essaie corentin
+	 * public int[][] calculeChemin(int posLigCaseDep,int posColCaseDep,int posLigCaseArr,int posColCaseArr){
+	
+		int resultat[][]=null;
+		for(int i = 0 ; i< plateau.length;i ++)
+			if (passageEntreCases(posLigCaseDep, posColCaseDep, posLigCaseArr, posLigCaseArr) == true) {
+				resultat[i][i] = posLigCaseDep;
+			}
+			while ((posLigCaseDep != posLigCaseArr) && (posColCaseDep != posColCaseArr)) {
+			
+			}
+		
+		
+		return resultat;
+	}
+/**
 
 
 	/**
