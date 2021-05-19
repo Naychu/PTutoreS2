@@ -26,6 +26,8 @@ public class Objet {
 	 */
 	public Objet(int numObjet) {
 		this.numObjet=numObjet;
+		posLignePlateau= -1;
+		posColonnePlateau= -1;
 	}
 
 	/**

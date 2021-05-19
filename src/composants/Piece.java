@@ -165,11 +165,8 @@ abstract public class Piece {
 	 * @param pointEntree L'indice/la position du point d'entrée.
 	 * @return true si il y a un point d'entrée, sinon false.
 	 */
-	public boolean getPointEntree(int pointEntree){
-		return this.pointsEntree[pointEntree];
-	}
 	public boolean[] getPointsEntree(){
-		return this.pointsEntree;
+		return pointsEntree;
 	}
 	
 	/**

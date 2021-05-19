@@ -36,11 +36,17 @@ public class TestPlateau {
 		for(int i = 0; i <= taillePlateau - 1; i++) {
 			for(int j = 0; j < taillePlateau; j++) {
 				Piece piecePlateau = plateau.placerPiecesAleatoierment();
-				IG.changerPiecePlateau(i, j, piecePlateau.getModelePiece(), piecePlateau.getOrientationPiece());
+				IG.changerPiecePlateau(i, j, piecePlateau.getModelePiece(), piecePlateau.getOrientationPiece());			
 			}
 		}
 		
 		IG.miseAJourAffichage();
+		IG.attendreClic();
+		
+		int[][] chemin = plateau.calculeChemin(3, 3, 0, 2);
+        System.out.println(chemin);
+        
+        IG.miseAJourAffichage();
 		IG.attendreClic();
 	}
 	

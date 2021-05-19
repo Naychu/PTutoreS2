@@ -155,37 +155,32 @@ public class Plateau {
 	 * @return null si il n'existe pas de chemin entre les deux case, un chemin sinon.
 	 */
 	public int[][] calculeChemin(int posLigCaseDep,int posColCaseDep,int posLigCaseArr,int posColCaseArr){
-		int resultat[][]=null;
-		if (passageEntreCases(posLigCaseDep, posColCaseDep, posLigCaseArr, posColCaseArr)==true) {
-			while ((posLigCaseDep != posLigCaseArr) && (posColCaseDep != posColCaseArr)) {
-				
-			}
-		}
-			
-			
-		
-		
-		
-		
-		return resultat;
-	}
-	/** essaie corentin
-	 * public int[][] calculeChemin(int posLigCaseDep,int posColCaseDep,int posLigCaseArr,int posColCaseArr){
-	
-		int resultat[][]=null;
-		for(int i = 0 ; i< plateau.length;i ++)
-			if (passageEntreCases(posLigCaseDep, posColCaseDep, posLigCaseArr, posLigCaseArr) == true) {
-				resultat[i][i] = posLigCaseDep;
-			}
-			while ((posLigCaseDep != posLigCaseArr) && (posColCaseDep != posColCaseArr)) {
-			
-			}
-		
-		
-		return resultat;
-	}
-/**
-
+		int resultat[][] = null;
+        while ((posLigCaseDep != posLigCaseArr) && (posColCaseDep != posColCaseArr)) {
+        	if(passageEntreCases(posLigCaseDep, posColCaseDep, posLigCaseDep + 1,posColCaseDep)==true) {
+        		posLigCaseDep = posLigCaseDep + 1 ;
+        		resultat = new int [posLigCaseDep][posColCaseDep];        
+                }
+        	else if(passageEntreCases(posLigCaseDep, posColCaseDep, posLigCaseDep - 1 , posColCaseDep)==true) {
+        		posLigCaseDep = posLigCaseDep - 1;
+        		resultat = new int [posLigCaseDep][posColCaseDep];
+                }
+        	else if(passageEntreCases(posLigCaseDep, posColCaseDep, posLigCaseDep, posColCaseDep + 1)==true) {
+        		posColCaseDep=posColCaseDep + 1;
+        		resultat = new int [posLigCaseDep][posColCaseDep];
+                }
+        	else if(passageEntreCases(posLigCaseDep, posColCaseDep, posLigCaseDep, posColCaseDep - 1)==true) {
+        		posColCaseDep=posColCaseDep - 1;
+        		resultat = new int [posLigCaseDep][posColCaseDep];
+                }
+        	else {
+        		resultat = null;
+                    
+                }
+                
+            }
+        return resultat;
+    }
 
 	/**
 	 * 
