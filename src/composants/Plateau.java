@@ -102,29 +102,32 @@ public class Plateau {
 	 */
 	private boolean passageEntreCases(int posLigCase1,int posColCase1,int posLigCase2,int posColCase2){
 		if (casesAdjacentes(posLigCase1, posColCase1, posLigCase2, posColCase2)==true) {
+			boolean[] entree1=this.plateau[posLigCase1][posColCase1].getPointEntree();
+			boolean[] entree2=this.plateau[posLigCase2][posColCase2].getPointEntree();
+
 			if (posLigCase1<posLigCase2) {
-				if (plateau[posLigCase1][posColCase1].getPointEntree(2)== true && plateau[posLigCase2][posColCase2].getPointEntree(0) == true) {
+				if (entree1[2]== true && entree2[0] == true) {
 					return true;
 				
 				}
 			}
 
 			if (posLigCase2<posLigCase1) {
-				if (plateau[posLigCase1][posColCase1].getPointEntree(0)== true && plateau[posLigCase2][posColCase2].getPointEntree(0) == true) {
+				if (entree2[2]== true && entree1[0] == true) {
 					return true;
 				
 				}
 			}
 
 			if (posColCase1<posColCase2) {
-				if (plateau[posLigCase1][posColCase1].getPointEntree(1)== true && plateau[posLigCase2][posColCase2].getPointEntree(3) == true) {
+				if (entree1[1]== true && entree2[3] == true) {
 					return true;
 				
 				}
 			}
 
 			if (posColCase1<posColCase2) {
-				if (plateau[posLigCase1][posColCase1].getPointEntree(3)== true && plateau[posLigCase2][posColCase2].getPointEntree(1) == true) {
+				if (entree2[1]== true && entree1[3] == true) {
 					return true;
 				
 				}

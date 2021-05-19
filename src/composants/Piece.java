@@ -168,6 +168,9 @@ abstract public class Piece {
 	public boolean getPointEntree(int pointEntree){
 		return this.pointsEntree[pointEntree];
 	}
+	public boolean[] getPointsEntree(){
+		return this.pointsEntree;
+	}
 	
 	/**
 	 * A Faire (12/05/21 JC Finalisé)
