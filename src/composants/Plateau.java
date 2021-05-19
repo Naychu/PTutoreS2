@@ -102,8 +102,8 @@ public class Plateau {
 	 */
 	private boolean passageEntreCases(int posLigCase1,int posColCase1,int posLigCase2,int posColCase2){
 		if (casesAdjacentes(posLigCase1, posColCase1, posLigCase2, posColCase2)==true) {
-			boolean[] entree1=this.plateau[posLigCase1][posColCase1].getPointEntree();
-			boolean[] entree2=this.plateau[posLigCase2][posColCase2].getPointEntree();
+			boolean[] entree1=this.plateau[posLigCase1][posColCase1].getPointsEntree();
+			boolean[] entree2=this.plateau[posLigCase2][posColCase2].getPointsEntree();
 
 			if (posLigCase1<posLigCase2) {
 				if (entree1[2]== true && entree2[0] == true) {
