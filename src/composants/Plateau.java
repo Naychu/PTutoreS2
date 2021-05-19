@@ -101,11 +101,39 @@ public class Plateau {
 	 * @return true si les positions passées en paramètre sont les positions de deux cases différentes et adjacentes de la grille de jeu et qu'il est possible de passer d'une cas à l'autre compte tenu des deux pièces posées sur les deux cases du plateau, false sinon.
 	 */
 	private boolean passageEntreCases(int posLigCase1,int posColCase1,int posLigCase2,int posColCase2){
-		if(posLigCase1 != posLigCase2 && posColCase1 != posColCase2) {
-			if (casesAdjacentes(posLigCase1, posColCase1, posLigCase2, posColCase2)==true) return true;
-		}
-		return false;
+		if (casesAdjacentes(posLigCase1, posColCase1, posLigCase2, posColCase2)==true) {
+			boolean[] entree1=this.plateau[posLigCase1][posColCase1].getPointEntree();
+			boolean[] entree2=this.plateau[posLigCase2][posColCase2].getPointEntree();
 
+			if (posLigCase1<posLigCase2) {
+				if (entree1[2]== true && entree2[0] == true) {
+					return true;
+				
+				}
+			}
+
+			if (posLigCase2<posLigCase1) {
+				if (entree2[2]== true && entree1[0] == true) {
+					return true;
+				
+				}
+			}
+
+			if (posColCase1<posColCase2) {
+				if (entree1[1]== true && entree2[3] == true) {
+					return true;
+				
+				}
+			}
+
+			if (posColCase1<posColCase2) {
+				if (entree2[1]== true && entree1[3] == true) {
+					return true;
+				
+				}
+			}
+		}
+		return false;	
 	}
 
 	/**
