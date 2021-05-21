@@ -116,7 +116,7 @@ public class ElementsPartie {
 	 * @return Le nombre de joueurs.
 	 */
 	public int getNombreJoueurs() {
-		return -1; // A Modifier
+		return nombreJoueurs; // A Modifier
 	}
 
 
