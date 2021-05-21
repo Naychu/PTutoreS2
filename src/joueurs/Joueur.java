@@ -36,6 +36,8 @@ public abstract class Joueur {
 		this.numJoueur = numJoueur;
 		this.nomJoueur = nomJoueur;
 		this.numeroImagePersonnage = numeroImagePersonnage;
+		this.posLigne = posLignePlateau;
+		this.posColonne = posColonnePlateau;
 	}
 
 	/**
