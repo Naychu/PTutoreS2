@@ -85,7 +85,7 @@ public abstract class Joueur {
 	 * @return Le nombre d'objets récupérés par le joueur.
 	 */
 	public int getNombreObjetsRecuperes() {
-		return -1; // A Modifier
+		return nombreObjetsRecuperes; // A Modifier
 	}
 
 
@@ -96,7 +96,7 @@ public abstract class Joueur {
 	 * @return  La ligne du plateau sur laquelle se trouve le joueur.
 	 */
 	public int getPosLigne() {
-		return -1; // A Modifier
+		return posLigne; // A Modifier
 	}
 
 
@@ -107,7 +107,7 @@ public abstract class Joueur {
 	 * @return La colonne du plateau sur laquelle se trouve le joueur.
 	 */
 	public int getPosColonne() {
-		return -1; // A Modifier
+		return posColonne; // A Modifier
 	}
 
 
@@ -118,7 +118,7 @@ public abstract class Joueur {
 	 * @return Le nom du joueur.
 	 */
 	public String getNomJoueur() {
-		return null; // A Modifier
+		return nomJoueur; // A Modifier
 	}
 
 	/**
@@ -128,7 +128,7 @@ public abstract class Joueur {
 	 * @return Le numéro de l'image représentant le joueur.
 	 */
 	public int getNumeroImagePersonnage() {
-		return -1; // A Modifier
+		return numeroImagePersonnage; // A Modifier
 	}
 
 	/**
@@ -191,7 +191,7 @@ public abstract class Joueur {
 	 * @return Le numéro du joueur.
 	 */
 	public int getNumJoueur(){
-		return -1; // A Modifier
+		return numJoueur; // A Modifier
 	}
 	
 	/**
