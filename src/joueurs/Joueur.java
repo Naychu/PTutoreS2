@@ -33,7 +33,9 @@ public abstract class Joueur {
 	 * @param posColonnePlateau La colonne du plateau sur laquelle est positionnés le joueur.
 	 */
 	public Joueur(int numJoueur,String nomJoueur, int numeroImagePersonnage,int posLignePlateau,int posColonnePlateau) {
-		// A Compléter
+		this.numJoueur = numJoueur;
+		this.nomJoueur = nomJoueur;
+		this.numeroImagePersonnage = numeroImagePersonnage;
 	}
 
 	/**
