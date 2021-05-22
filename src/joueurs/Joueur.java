@@ -20,7 +20,7 @@ public abstract class Joueur {
 	private int posColonne; // La colonne correspondant �  la position du joueur sur le plateau
 
 	/**
-	 * A Faire (Quand Qui Statut)
+	 * A Faire (21/05/2021 CG a verifier)
 	 * 
 	 * Constructeur permettant de créer un joueur �  partir de son nom, son type et 
 	 * le numéro de l'image le représentant. La position du joueur sur le plateau doit être
@@ -82,7 +82,7 @@ public abstract class Joueur {
 
 	/**
 	 * 
-	 * A Faire (Quand Qui Statut)
+	 * A Faire (21/05/2021 CG finie)
 	 *  
 	 * Méthode retournant le nombre d'objets récupérés par le joueur.
 	 * 
@@ -94,7 +94,7 @@ public abstract class Joueur {
 
 
 	/**
-	 * A Faire (Quand Qui Statut)
+	 * A Faire (21/05/2021 CG finie)
 	 *  
 	 * Méthode retournant la ligne du plateau sur laquelle se trouve le joueur.
 	 * @return  La ligne du plateau sur laquelle se trouve le joueur.
@@ -105,7 +105,7 @@ public abstract class Joueur {
 
 
 	/**
-	 * A Faire (Quand Qui Statut)
+	 * A Faire (21/05/2021 CG finie)
 	 * 
 	 * Méthode retournant la colonne du plateau sur laquelle se trouve le joueur.
 	 * @return La colonne du plateau sur laquelle se trouve le joueur.
@@ -116,7 +116,7 @@ public abstract class Joueur {
 
 
 	/**
-	 * A Faire (Quand Qui Statut)
+	 * A Faire (21/05/2021 CG finie)
 	 * 
 	 * Méthode retournant le nom du joueur.
 	 * @return Le nom du joueur.
@@ -126,7 +126,7 @@ public abstract class Joueur {
 	}
 
 	/**
-	 * A Faire (Quand Qui Statut)
+	 * A Faire (21/05/2021 CG finie)
 	 * 
 	 * Méthode retournant le numéro de l'image représentant le joueur.
 	 * @return Le numéro de l'image représentant le joueur.
@@ -136,7 +136,7 @@ public abstract class Joueur {
 	}
 
 	/**
-	 * A Faire (Quand Qui Statut)
+	 * A Faire (21/05/2021 CG a verifier / pas terminer)
 	 * 
 	 * Méthode permettant d'affecter au joueur les objets qu'il devra récupérer durant le jeu.
 	 * Attention : cette méthode devra créer un nouveau tableau pour l'attribut this.objetsARecuperer.
@@ -191,7 +191,7 @@ public abstract class Joueur {
 	
 
 	/**
-	 * A Faire (Quand Qui Statut)
+	 * A Faire (21/05/2021 CG finie)
 	 * 
 	 * Méthode retournant le numéro du joueur.
 	 * 
