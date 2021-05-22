@@ -144,7 +144,10 @@ public abstract class Joueur {
 	 * @param objetsARecuperer Un tableau contenant les objets �  récupérer dans l'ordre.
 	 */
 	public void setObjetsJoueur(Objet objetsARecuperer[]){
-		// A Compléter
+		Objet [] recupObjet = new Objet [objetsARecuperer.length];
+		for (int i = 0 ; i <= objetsARecuperer.length;i++) {
+			recupObjet[i] = objetsARecuperer[i];
+		}
 	}
 	
 	/**
