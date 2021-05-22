@@ -151,7 +151,7 @@ public abstract class Joueur {
 	}
 	
 	/**
-	 * A Faire (Quand Qui Statut)
+	 * A Faire (22/05/2021 CG A verrif/modifier le null)
 	 * 
 	 * Méthode retournant un nouveau tableau contenant les objets attribués au joueur. Des objets �  récupérer devront être
 	 * affectés au joueur avant tout appel de cette méthode (on suppose donc que l'attribut objetsJoueur est non null).
@@ -160,10 +160,11 @@ public abstract class Joueur {
 	 */
 	public Objet[] getObjetsJoueur(){
 		Objet resultat[]=null;
-
-		// A Compléter
-
+		for (int  i = 0; i <= 6; i++){
+			resultat[i] = getProchainObjet();
+		}
 		return resultat;
+
 	}
 	
 	
