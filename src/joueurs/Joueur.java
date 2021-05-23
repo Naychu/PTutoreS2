@@ -204,14 +204,15 @@ public abstract class Joueur {
 	
 	/**
 	 * 
-	 * A Faire (Quand Qui Statut)
+	 * A Faire (22/05/2021 TG A verifier)
 	 * 
 	 * Méthode permettant le changement de position du joueur.
 	 * @param posLigne La ligne de la nouvelle position.
 	 * @param posColonne La colonne de la nouvelle position.
 	 */
 	public void setPosition(int posLigne,int posColonne) {
-		// A Compléter
+		this.posLigne=posLigne;
+		this.posColonne=posColonne;
 	}
 	
 	/**
