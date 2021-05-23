@@ -32,7 +32,7 @@ public class TestJoueur{
 		for(int i = 0; i <= taillePlateau - 1; i++) {
 			for(int j = 0; j < taillePlateau; j++) {
 				Piece piecePlateau = plateau.placerPiecesAleatoierment();
-				IG.changerPiecePlateau(i, j, piecePlateau.getModelePiece(), piecePlateau.getOrientationPiece());			
+				IG.changerPiecePlateau(i, j, piecePlateau.getModelePiece(), piecePlateau.getOrientationPiece());	
 			}
 		}
         
@@ -40,6 +40,7 @@ public class TestJoueur{
         for(Joueur all : joueurs) {
         	IG.changerNomJoueur(all.getNumJoueur(), all.getNomJoueur() +" ("+ all.getCategorie() +")");
             IG.changerImageJoueur(all.getNumJoueur(), all.getNumeroImagePersonnage());
+            IG.placerJoueurSurPlateau(all.getNumJoueur(), all.getPosLigne(), all.getPosColonne());
         }
         
         String message[]={
@@ -51,6 +52,20 @@ public class TestJoueur{
 		IG.miseAJourAffichage();
 		IG.attendreClic();
 		
+		for(Joueur all : joueurs) {			
+			String tour[]={
+					"",
+					"Au tour de " + all.getNomJoueur(),
+					"Sélectionner une case ...",
+					""
+			};
+			
+			IG.afficherMessage(tour);
+			IG.miseAJourAffichage();
+			
+			int[] choixCase = all.choisirCaseArrivee(null);
+			IG.placerJoueurSurPlateau(all.getNumJoueur(), choixCase[0], choixCase[1]);			
+		}
         
         
 
