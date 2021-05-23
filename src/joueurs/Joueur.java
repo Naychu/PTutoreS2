@@ -82,7 +82,7 @@ public abstract class Joueur {
 
 	/**
 	 * 
-	 * A Faire (21/05/2021 CG finie)
+	 * A Faire (21/05/2021 CG fini)
 	 *  
 	 * Méthode retournant le nombre d'objets récupérés par le joueur.
 	 * 
@@ -94,7 +94,7 @@ public abstract class Joueur {
 
 
 	/**
-	 * A Faire (21/05/2021 CG finie)
+	 * A Faire (21/05/2021 CG fini)
 	 *  
 	 * Méthode retournant la ligne du plateau sur laquelle se trouve le joueur.
 	 * @return  La ligne du plateau sur laquelle se trouve le joueur.
@@ -105,7 +105,7 @@ public abstract class Joueur {
 
 
 	/**
-	 * A Faire (21/05/2021 CG finie)
+	 * A Faire (21/05/2021 CG fini)
 	 * 
 	 * Méthode retournant la colonne du plateau sur laquelle se trouve le joueur.
 	 * @return La colonne du plateau sur laquelle se trouve le joueur.
@@ -116,7 +116,7 @@ public abstract class Joueur {
 
 
 	/**
-	 * A Faire (21/05/2021 CG finie)
+	 * A Faire (21/05/2021 CG fini)
 	 * 
 	 * Méthode retournant le nom du joueur.
 	 * @return Le nom du joueur.
@@ -126,7 +126,7 @@ public abstract class Joueur {
 	}
 
 	/**
-	 * A Faire (21/05/2021 CG finie)
+	 * A Faire (21/05/2021 CG fini)
 	 * 
 	 * Méthode retournant le numéro de l'image représentant le joueur.
 	 * @return Le numéro de l'image représentant le joueur.
@@ -151,7 +151,7 @@ public abstract class Joueur {
 	}
 	
 	/**
-	 * A Faire (22/05/2021 CG A verrif/modifier le null)
+	 * A Faire (22/05/2021 CG fini)
 	 * 
 	 * Méthode retournant un nouveau tableau contenant les objets attribués au joueur. Des objets �  récupérer devront être
 	 * affectés au joueur avant tout appel de cette méthode (on suppose donc que l'attribut objetsJoueur est non null).
@@ -159,7 +159,7 @@ public abstract class Joueur {
 	 * @return Un tableau d'Objet correspondant aux objets �  récupérer du joueur.
 	 */
 	public Objet[] getObjetsJoueur(){
-		Objet resultat[]=null;
+		Objet resultat[]= new Objet[objetsJoueur.length];
 		for (int  i = 0; i <= 6; i++){
 			resultat[i] = getProchainObjet();
 		}
@@ -192,7 +192,7 @@ public abstract class Joueur {
 	
 
 	/**
-	 * A Faire (21/05/2021 CG finie)
+	 * A Faire (21/05/2021 CG fini)
 	 * 
 	 * Méthode retournant le numéro du joueur.
 	 * 
