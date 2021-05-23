@@ -151,7 +151,7 @@ public abstract class Joueur {
 	}
 	
 	/**
-	 * A Faire (22/05/2021 CG fini)
+	 * A Faire (22/05/2021 JC fini)
 	 * 
 	 * Méthode retournant un nouveau tableau contenant les objets attribués au joueur. Des objets �  récupérer devront être
 	 * affectés au joueur avant tout appel de cette méthode (on suppose donc que l'attribut objetsJoueur est non null).
@@ -159,17 +159,13 @@ public abstract class Joueur {
 	 * @return Un tableau d'Objet correspondant aux objets �  récupérer du joueur.
 	 */
 	public Objet[] getObjetsJoueur(){
-		Objet resultat[]= new Objet[objetsJoueur.length];
-		for (int  i = 0; i <= 6; i++){
-			resultat[i] = getProchainObjet();
-		}
-		return resultat;
+		return objetsJoueur;
 
 	}
 	
 	
 	/**
-	 * A Faire (Quand Qui Statut)
+	 * A Faire (23/05/2021 JC Fini)
 	 * 
 	 * Méthode retournant le prochain objet �  récupérer par le joueur.
 	 * Avant d'appeler cette méthode il est nécessaire de s'assurer qu'il existe encore des objets �  récupérer.
@@ -177,17 +173,19 @@ public abstract class Joueur {
 	 * @return Le prochain objet �  récupérer par le joueur.
 	 */
 	public Objet getProchainObjet(){
-		return null; // A Modifier
+		Objet resultat = null;
+		if(!(nombreObjetsRecuperes >= objetsJoueur.length)) resultat = objetsJoueur[nombreObjetsRecuperes + 1];
+		return resultat;
 	}
 	
 	/**
 	 * 
-	 * A Faire (Quand Qui Statut)
+	 * A Faire (23/05/2021 JC Fini)
 	 * 
 	 * Méthode permettant de récupérer un nouvel objet. Cette méthode incrémente simplement de 1 le nombre d'objets qui ont été récupérés.
 	 */
 	public void recupererObjet(){
-		// A Compléter
+		nombreObjetsRecuperes++;
 	}
 	
 
