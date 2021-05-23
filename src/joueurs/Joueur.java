@@ -211,8 +211,7 @@ public abstract class Joueur {
 	 * @param posColonne La colonne de la nouvelle position.
 	 */
 	public void setPosition(int posLigne,int posColonne) {
-		this.posLigne = posLigne;
-		this.posColonne = posColonne;
+		// A Compléter
 	}
 	
 	/**
