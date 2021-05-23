@@ -6,6 +6,8 @@ import joueurs.Joueur;
 
 public class TestJoueur{
 	public static void main(String[] args) {
+		int taillePlateau = 7;
+		
         Object parametres[];
         parametres=IG.saisirParametres();
         
@@ -13,20 +15,44 @@ public class TestJoueur{
         IG.creerFenetreJeu("Démo Librairie IG version 1.9",nbJoueurs);
         IG.rendreVisibleFenetreJeu();
         
+        /*
         IG.changerNomJoueur(0, (String)parametres[1] +" ("+ (String)parametres[2] +")");
         IG.changerImageJoueur(0,((Integer)parametres[3]).intValue());
         IG.changerNomJoueur(1, (String)parametres[4] +" ("+ (String)parametres[5] +")");
         IG.changerImageJoueur(1,((Integer)parametres[6]).intValue());
         IG.changerNomJoueur(2, (String)parametres[7] +" ("+ (String)parametres[8] +")");
         IG.changerImageJoueur(2,((Integer)parametres[9]).intValue());
-        
-        IG.miseAJourAffichage();
-        IG.attendreClic();
+        */
         
         Plateau plateau = new Plateau();
         Piece pieceHorsPlateau = plateau.placerPiecesAleatoierment();
         
+        IG.changerPieceHorsPlateau(pieceHorsPlateau.getModelePiece(), pieceHorsPlateau.getOrientationPiece());
+		
+		for(int i = 0; i <= taillePlateau - 1; i++) {
+			for(int j = 0; j < taillePlateau; j++) {
+				Piece piecePlateau = plateau.placerPiecesAleatoierment();
+				IG.changerPiecePlateau(i, j, piecePlateau.getModelePiece(), piecePlateau.getOrientationPiece());			
+			}
+		}
+        
         Joueur joueurs[]=Joueur.nouveauxJoueurs(parametres);
+        for(Joueur all : joueurs) {
+        	IG.changerNomJoueur(all.getNumJoueur(), all.getNomJoueur() +" ("+ all.getCategorie() +")");
+            IG.changerImageJoueur(all.getNumJoueur(), all.getNumeroImagePersonnage());
+        }
+        
+        String message[]={
+				"",
+				"Cliquez pour continuer …",
+				""
+		};
+		IG.afficherMessage(message);
+		IG.miseAJourAffichage();
+		IG.attendreClic();
+		
+        
+        
 
     }
 }
