@@ -61,28 +61,19 @@ public class TestJoueur{
 					""
 			};
 			
-		IG.afficherMessage(tour);
-		IG.miseAJourAffichage();
-		
-		if(all.getCategorie()=="Ordinateur"){
-			IG.placerJoueurSurPlateau(all.getNumJoueur(), all.getPosLigne(), all.getPosColonne());
+			IG.afficherMessage(tour);
+			IG.miseAJourAffichage();
 			
+			if(all.getCategorie().equals("Ordinateur")){
+				IG.placerJoueurSurPlateau(all.getNumJoueur(), all.getPosLigne(), all.getPosColonne());
+				
+			} else {
+				int[] choixCase = all.choisirCaseArrivee(null);
+				IG.placerJoueurSurPlateau(all.getNumJoueur(), choixCase[0], choixCase[1]);	
+				
+			}
+			IG.afficherMessage(tour);
+			IG.miseAJourAffichage();			
 		}
-		else {
-			int[] choixCase = all.choisirCaseArrivee(null);
-			IG.placerJoueurSurPlateau(all.getNumJoueur(), choixCase[0], choixCase[1]);	
-			
-		}
-		IG.afficherMessage(tour);
-		IG.miseAJourAffichage();
-		
-			
-			
-			
-		}
-		
-        
-        
-
     }
 }
