@@ -161,6 +161,7 @@ public class Plateau {
 				resultat[i][j]=0;
 			}
 		}
+		return resultat;
 	}
 		
 		
