@@ -155,21 +155,31 @@ public class Plateau {
 	 * @return null si il n'existe pas de chemin entre les deux case, un chemin sinon.
 	 */
 	public int[][] calculeChemin(int posLigCaseDep,int posColCaseDep,int posLigCaseArr,int posColCaseArr){
-		int resultat[][] = null;
-        while ((posLigCaseDep != posLigCaseArr) && (posColCaseDep != posColCaseArr)) {
+		int resultat[][] = new int[7][7];
+		for(int i=0;i<7;i++) {
+			for(int j=0;j<7;j++) {
+				resultat[i][j]=0;
+			}
+		}
+	}
+		
+		
+         /**
+          * while ((posLigCaseDep != posLigCaseArr) && (posColCaseDep != posColCaseArr)) {
+          
         	if(passageEntreCases(posLigCaseDep, posColCaseDep, posLigCaseDep + 1,posColCaseDep)==true) {
         		posLigCaseDep = posLigCaseDep + 1 ;
         		resultat = new int [posLigCaseDep][posColCaseDep];        
                 }
-        	else if(passageEntreCases(posLigCaseDep, posColCaseDep, posLigCaseDep - 1 , posColCaseDep)==true) {
+        	if(passageEntreCases(posLigCaseDep, posColCaseDep, posLigCaseDep - 1 , posColCaseDep)==true) {
         		posLigCaseDep = posLigCaseDep - 1;
         		resultat = new int [posLigCaseDep][posColCaseDep];
                 }
-        	else if(passageEntreCases(posLigCaseDep, posColCaseDep, posLigCaseDep, posColCaseDep + 1)==true) {
+        	if(passageEntreCases(posLigCaseDep, posColCaseDep, posLigCaseDep, posColCaseDep + 1)==true) {
         		posColCaseDep=posColCaseDep + 1;
         		resultat = new int [posLigCaseDep][posColCaseDep];
                 }
-        	else if(passageEntreCases(posLigCaseDep, posColCaseDep, posLigCaseDep, posColCaseDep - 1)==true) {
+        	if(passageEntreCases(posLigCaseDep, posColCaseDep, posLigCaseDep, posColCaseDep - 1)==true) {
         		posColCaseDep=posColCaseDep - 1;
         		resultat = new int [posLigCaseDep][posColCaseDep];
                 }
@@ -181,6 +191,7 @@ public class Plateau {
             }
         return resultat;
     }
+    **\
 
 	/**
 	 * 

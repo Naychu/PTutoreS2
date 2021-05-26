@@ -3,6 +3,7 @@ import composants.Piece;
 import composants.Plateau;
 import grafix.interfaceGraphique.IG;
 import joueurs.Joueur;
+import joueurs.JoueurOrdinateur;
 
 public class TestJoueur{
 	public static void main(String[] args) {
@@ -60,12 +61,26 @@ public class TestJoueur{
 					""
 			};
 			
-			IG.afficherMessage(tour);
-			IG.miseAJourAffichage();
+		IG.afficherMessage(tour);
+		IG.miseAJourAffichage();
+		
+		if(all.getCategorie()=="Ordinateur"){
+			IG.placerJoueurSurPlateau(all.getNumJoueur(), all.getPosLigne(), all.getPosColonne());
 			
-			int[] choixCase = all.choisirCaseArrivee(null);
-			IG.placerJoueurSurPlateau(all.getNumJoueur(), choixCase[0], choixCase[1]);			
 		}
+		else {
+			int[] choixCase = all.choisirCaseArrivee(null);
+			IG.placerJoueurSurPlateau(all.getNumJoueur(), choixCase[0], choixCase[1]);	
+			
+		}
+		IG.afficherMessage(tour);
+		IG.miseAJourAffichage();
+		
+			
+			
+			
+		}
+		
         
         
 
