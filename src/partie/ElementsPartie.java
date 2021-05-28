@@ -66,35 +66,35 @@ public class ElementsPartie {
 	}
 
 	/**
-	 * A Faire (Quand Qui Statut)
+	 * A Faire (28/05/2021 CG Fini)
 	 * 
 	 * Méthode permettant de récupérer les joueurs de la partie.
 	 * @return Les joueurs de la partie.
 	 */
 	public Joueur[] getJoueurs() {
-		return null; // A Modifier
+		return joueurs; // A Modifier
 	}
 
 
 	/**
-	 * A Faire (Quand Qui Statut)
+	 * A Faire (28/05/2021 CG Fini)
 	 * 
 	 * Méthode permettant de récupérer les pièces de la partie.
 	 * @return Les objets de la partie.
 	 */
 	public Objet[] getObjets() {
-		return null; // A Modifier
+		return objets; // A Modifier
 	}
 
 
 	/**
-	 * A Faire (Quand Qui Statut)
+	 * A Faire (28/05/2021 CG Fini)
 	 * 
 	 * Méthode permettant de récupérer le plateau de pièces de la partie.
 	 * @return Le plateau de pièces.
 	 */
 	public Plateau getPlateau() {
-		return null; // A Modifier
+		return plateau; // A Modifier
 	}
 
 
