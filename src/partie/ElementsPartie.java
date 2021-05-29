@@ -3,7 +3,7 @@ import java.util.Random;
 import composants.Objet;
 import composants.Piece;
 import composants.Plateau;
-import composants.Utils;
+import grafix.interfaceGraphique.IG;
 import joueurs.Joueur;
 
 /**
@@ -21,20 +21,25 @@ public class ElementsPartie {
 
 	/**
 	 * 
-	 * A Faire (Quand Qui Statut)
+	 * A Faire (29/05/2021 JC Fini)
 	 *  
 	 * Constructeur permettant de générer et d'initialiser l'ensemble des éléments d'une partie (sauf les joueurs qui sont donnés en paramètres).
 	 * 
 	 * Un plateau est créé en placant 49 oièces de manière aléatoire (utilisation de la méthode placerPiecesAleatoierment de la classe Plateau).
 	 * La pièce restante (celle non présente sur le plateau) est affectée �  la pièce libre.
 	 * Les 18 objets sont créés avec des positions aléatoires sur le plateau (utilisation de la méthode Objet.nouveauxObjets)
-	 * et distribuées aux différents joueurs (utilisation de la méthode attribuerObjetsAuxJoueurs).
+	 * et distribu�es aux différents joueurs (utilisation de la méthode attribuerObjetsAuxJoueurs).
 	 * 
 	 * @param joueurs Les joueurs de la partie. Les objets des joueurs ne sont pas encore attribués (c'est au constructeur de le faire).
 	 */
 	public ElementsPartie(Joueur[] joueurs) {
-		plateau.placerPiecesAleatoierment();
-		Objet.nouveauxObjets();
+		/*plateau.placerPiecesAleatoierment();
+		Objet.nouveauxObjets();*/
+		this.joueurs = joueurs;
+		plateau = new Plateau();
+		pieceLibre = plateau.placerPiecesAleatoierment();
+		objets = Objet.nouveauxObjets();
+		attribuerObjetsAuxJoueurs();
 		
 		
 	}
@@ -61,7 +66,7 @@ public class ElementsPartie {
 	 * Méthode permettant d'attribuer les objets aux différents joueurs de manière aléatoire.
 	 */
 	private void attribuerObjetsAuxJoueurs(){
-		int tab[] = new int[24];
+		/*int tab[] = new int[24];
 		int g = 0;
 		for(int i=0; i<=joueurs.length; i++) {
 			tab[g] = i;
@@ -84,7 +89,20 @@ public class ElementsPartie {
 			tab[g]=999;
 			g+=1;
 			
-		}
+		}*/
+		
+		// On g�n�re une liste avec les objets qu'aura besoin les joueurs (6 par joueurs, si 2 joueurs une liste de 12 objets)
+		/*Objet[] objets = new Objet[joueurs.length * 6];
+		for(int i = 0; i <= joueurs.length * 6; i++) {
+			Random rand = new Random();
+			int r = rand.nextInt(objets.length - 1);
+			objets[i] = new Objet(r);
+		}*/
+		
+		/*
+		for(Objet all : objets) {
+			IG.changerObjetJoueur(nombreJoueurs, nombreJoueurs, nombreJoueurs)
+		}*/
 	}
 
 	/**
