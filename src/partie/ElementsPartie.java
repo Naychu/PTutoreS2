@@ -66,6 +66,15 @@ public class ElementsPartie {
 	 * Méthode permettant d'attribuer les objets aux différents joueurs de manière aléatoire.
 	 */
 	private void attribuerObjetsAuxJoueurs(){
+		for(Joueur all : joueurs) {
+			Objet[] objets = new Objet[5];
+			for(int i = 0; i <= 5; i++) {
+				Random rand = new Random();
+				int r = rand.nextInt(objets.length);
+				IG.changerObjetJoueur(all.getNumJoueur(), r, i);
+			}
+		}
+		
 		/*int tab[] = new int[24];
 		int g = 0;
 		for(int i=0; i<=joueurs.length; i++) {
@@ -89,19 +98,6 @@ public class ElementsPartie {
 			tab[g]=999;
 			g+=1;
 			
-		}*/
-		
-		// On g�n�re une liste avec les objets qu'aura besoin les joueurs (6 par joueurs, si 2 joueurs une liste de 12 objets)
-		/*Objet[] objets = new Objet[joueurs.length * 6];
-		for(int i = 0; i <= joueurs.length * 6; i++) {
-			Random rand = new Random();
-			int r = rand.nextInt(objets.length - 1);
-			objets[i] = new Objet(r);
-		}*/
-		
-		/*
-		for(Objet all : objets) {
-			IG.changerObjetJoueur(nombreJoueurs, nombreJoueurs, nombreJoueurs)
 		}*/
 	}
 
