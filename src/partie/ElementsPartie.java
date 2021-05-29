@@ -1,5 +1,5 @@
 package partie;
-
+import java.util.Random;
 import composants.Objet;
 import composants.Piece;
 import composants.Plateau;
@@ -34,7 +34,6 @@ public class ElementsPartie {
 	 */
 	public ElementsPartie(Joueur[] joueurs) {
 		
-		// A Compléter
 		
 	}
 
@@ -60,63 +59,67 @@ public class ElementsPartie {
 	 * Méthode permettant d'attribuer les objets aux différents joueurs de manière aléatoire.
 	 */
 	private void attribuerObjetsAuxJoueurs(){
-	
-		// A Compléter
+		for(int i=0; i<=joueurs.length; i++) {
+			Random rand = new Random();
+			int r = rand.nextInt(objets.length);
+			joueurs[i]=
+			
+		}
 		
 	}
 
 	/**
-	 * A Faire (28/05/2021 CG Fini)
+	 * (28/05/2021 CG Fini)
 	 * 
 	 * Méthode permettant de récupérer les joueurs de la partie.
 	 * @return Les joueurs de la partie.
 	 */
 	public Joueur[] getJoueurs() {
-		return joueurs; // A Modifier
+		return joueurs; 
 	}
 
 
 	/**
-	 * A Faire (28/05/2021 CG Fini)
+	 * (28/05/2021 CG Fini)
 	 * 
 	 * Méthode permettant de récupérer les pièces de la partie.
 	 * @return Les objets de la partie.
 	 */
 	public Objet[] getObjets() {
-		return objets; // A Modifier
+		return objets; 
 	}
 
 
 	/**
-	 * A Faire (28/05/2021 CG Fini)
+	 *  (28/05/2021 CG Fini)
 	 * 
 	 * Méthode permettant de récupérer le plateau de pièces de la partie.
 	 * @return Le plateau de pièces.
 	 */
 	public Plateau getPlateau() {
-		return plateau; // A Modifier
+		return plateau; 
 	}
 
 
 	/**
-	 * A Faire (Quand Qui Statut)
+	 *  (29/05 Max Fini)
 	 * 
 	 * Méthode permettant de récupérer la pièce libre de la partie.
 	 * @return La pièce libre.
 	 */
 	public Piece getPieceLibre() {
-		return null; // A Modifier
+		return pieceLibre; 
 	}
 
 
 	/**
-	 * A Faire (Quand Qui Statut)
+	 * (28/05 CG Fini)
 	 * 
 	 * Méthode permettant de récupérer le nombre de joueurs de la partie.
 	 * @return Le nombre de joueurs.
 	 */
 	public int getNombreJoueurs() {
-		return nombreJoueurs; // A Modifier
+		return nombreJoueurs; 
 	}
 
 
