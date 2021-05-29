@@ -56,17 +56,35 @@ public class ElementsPartie {
 	}
 
 	/**
-	 * A Faire (Quand Qui Statut)
+	 * A Faire (29/05/2021 all A verifier)
 	 * 
 	 * Méthode permettant d'attribuer les objets aux différents joueurs de manière aléatoire.
 	 */
 	private void attribuerObjetsAuxJoueurs(){
+		int tab[] = new int[24];
+		int g = 0;
 		for(int i=0; i<=joueurs.length; i++) {
-			Random rand = new Random();
-			int r = rand.nextInt(objets.length);
-			joueurs[i]=
+			tab[g] = i;
+			for (int j = 0; j<=objets.length;j++) {
+				boolean t = false;
+				Random rand = new Random();
+				int r = rand.nextInt(objets.length);
+				while(t==false){
+					r = rand.nextInt(objets.length);
+					for (int h = 0 ; h<=tab.length;h++){
+						if(tab[h]!=r) {
+							t = true;					
+						}
+					}
+				}
+				
+				tab[g] = r;
+				g += 1;
+			}
+			tab[g]=999;
+			g+=1;
+			
 		}
-		
 	}
 
 	/**
