@@ -33,6 +33,8 @@ public class ElementsPartie {
 	 * @param joueurs Les joueurs de la partie. Les objets des joueurs ne sont pas encore attribués (c'est au constructeur de le faire).
 	 */
 	public ElementsPartie(Joueur[] joueurs) {
+		plateau.placerPiecesAleatoierment();
+		Objet.nouveauxObjets();
 		
 		
 	}
@@ -63,7 +65,6 @@ public class ElementsPartie {
 			Random rand = new Random();
 			int r = rand.nextInt(objets.length);
 			joueurs[i]=
-			
 		}
 		
 	}
