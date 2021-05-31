@@ -23,9 +23,28 @@ public class Partie {
 		// Initialisation de la partie
 		parametrerEtInitialiser();
 
-		// On affiche l'ensemble des éléments
+		// Element: Joueurs
+		for(Joueur all : elementsPartie.getJoueurs()) {
+	        IG.changerNomJoueur(all.getNumJoueur(), all.getNomJoueur() +" ("+ all.getCategorie() +")");
+	        IG.changerImageJoueur(all.getNumJoueur(), all.getNumeroImagePersonnage());
+	        IG.placerJoueurSurPlateau(all.getNumJoueur(), all.getPosLigne(), all.getPosColonne());
+	    }
 		
-		// A Compléter
+		// Element: Plateau
+		Plateau plateau = elementsPartie.getPlateau();
+	    Piece pieceHorsPlateau = plateau.placerPiecesAleatoierment();
+	        
+	    IG.changerPieceHorsPlateau(pieceHorsPlateau.getModelePiece(), pieceHorsPlateau.getOrientationPiece());
+			
+		for(int i = 0; i <= 7 - 1; i++) {
+			for(int j = 0; j < 7; j++) {
+				Piece piecePlateau = plateau.placerPiecesAleatoierment();
+				IG.changerPiecePlateau(i, j, piecePlateau.getModelePiece(), piecePlateau.getOrientationPiece());	
+			}
+		}
+		
+		// Element: Objet
+		
 
 		IG.rendreVisibleFenetreJeu();
 	}
