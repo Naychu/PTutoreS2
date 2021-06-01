@@ -1,5 +1,8 @@
 package tests;
 
+import java.util.Random;
+
+import composants.Objet;
 import composants.Piece;
 import composants.Plateau;
 import grafix.interfaceGraphique.IG;
@@ -47,7 +50,38 @@ public class TestElementsPartie {
 		IG.afficherMessage(message);
 		IG.miseAJourAffichage();
 		IG.attendreClic();
+		
+		Objet[] t = Objet.nouveauxObjets();
+		int [] pos = new int[36];
+		boolean b = false;
+		int r = 0;
+		int y = 0;
 
+		while(r < 18){
+			Random rand1 = new Random();
+			int l = rand1.nextInt(7);
+			int c = rand1.nextInt(7);
+			for ( int i = 0;i<pos.length-1;i+=2) {
+				if (pos[i]==l && pos[i+1] == c) {
+					b = true;
+				}
+			}
+			if ( b == false) {
+				IG.placerObjetPlateau(t[r].getNumeroObjet(),l,c);
+				pos[y*2]=l;
+				pos[y*2+1]=c;
+				y  +=1;
+				r +=1;
+			}
+			b = false;
+				
+			
+			
+
+		}
+		System.out.println(r);
+		IG.miseAJourAffichage();
+		IG.attendreClic();
 	}
 
 }

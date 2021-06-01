@@ -67,26 +67,52 @@ public class ElementsPartie {
 	 */
 	private void attribuerObjetsAuxJoueurs(){
 		boolean exist = false;
-		int[] aused = new int[joueurs.length * 5];
-		for(Joueur all : joueurs) {
-			for(int i = 0; i <= 5; i++) {
-				Random rand = new Random();
-				int r = rand.nextInt(19);
-				for(int check : aused) {
-					exist = false;
-					if(check == r) exist = true;
-					System.out.println(exist);
+		if (joueurs.length == 3) {
+			int[] aused = new int[joueurs.length * 5];
+			for(Joueur all : joueurs) {
+				for(int i = 0; i <= 5; i++) {
+					Random rand = new Random();
+					int r = rand.nextInt(19);
+					for(int check : aused) {
+						exist = false;
+						if(check == r) {
+							exist = true;
+							}
+						System.out.println(exist);
+					}
+					if(exist == true) {
+						i--;
+					} else {
+						IG.changerObjetJoueur(all.getNumJoueur(), r, i);
+						aused[i] = r;
+					}
+					System.out.println(aused);
 				}
-				if(exist == true) {
-					i--;
-				} else {
-					IG.changerObjetJoueur(all.getNumJoueur(), r, i);
-					aused[i] = r;
+			}
+		if (joueurs.length == 2) {
+			int[] aused2 = new int[joueurs.length * 8];
+			for(Joueur all : joueurs) {
+				for(int i = 0; i <= 8; i++) {
+					Random rand = new Random();
+					int r = rand.nextInt(19);
+					for(int check : aused2) {
+						exist = false;
+						if(check == r) {
+							exist = true;
+							}
+						System.out.println(exist);
+						}
+						if(exist == true) {
+							i--;
+						} else {
+							IG.changerObjetJoueur(all.getNumJoueur(), r, i);
+							aused2[i] = r;
+						}
+						System.out.println(aused2);
+					}
 				}
-				System.out.println(aused);
 			}
 		}
-		
 		/*int tab[] = new int[24];
 		int g = 0;
 		for(int i=0; i<=joueurs.length; i++) {
