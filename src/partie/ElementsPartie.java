@@ -65,13 +65,14 @@ public class ElementsPartie {
 	 * 
 	 * Méthode permettant d'attribuer les objets aux différents joueurs de manière aléatoire.
 	 */
-	private void attribuerObjetsAuxJoueurs(){
+	public void attribuerObjetsAuxJoueurs(){
 		boolean exist = false;
+		Random rand = new Random();
+
 		if (joueurs.length == 3) {
 			int[] aused = new int[joueurs.length * 5];
 			for(Joueur all : joueurs) {
 				for(int i = 0; i <= 5; i++) {
-					Random rand = new Random();
 					int r = rand.nextInt(19);
 					for(int check : aused) {
 						exist = false;
@@ -89,11 +90,11 @@ public class ElementsPartie {
 					System.out.println(aused);
 				}
 			}
+		}
 		if (joueurs.length == 2) {
 			int[] aused2 = new int[joueurs.length * 8];
 			for(Joueur all : joueurs) {
 				for(int i = 0; i <= 8; i++) {
-					Random rand = new Random();
 					int r = rand.nextInt(19);
 					for(int check : aused2) {
 						exist = false;
@@ -101,18 +102,18 @@ public class ElementsPartie {
 							exist = true;
 							}
 						System.out.println(exist);
-						}
-						if(exist == true) {
-							i--;
-						} else {
-							IG.changerObjetJoueur(all.getNumJoueur(), r, i);
-							aused2[i] = r;
-						}
-						System.out.println(aused2);
 					}
+					if(exist == true) {
+						i--;
+					} else {
+						IG.changerObjetJoueur(all.getNumJoueur(), r, i);
+						aused2[i] = r;
+					}
+					System.out.println(aused2);
 				}
 			}
 		}
+	
 		/*int tab[] = new int[24];
 		int g = 0;
 		for(int i=0; i<=joueurs.length; i++) {

@@ -82,6 +82,7 @@ public class TestElementsPartie {
 		System.out.println(r);
 		IG.miseAJourAffichage();
 		IG.attendreClic();
+		
 	}
 
 }
