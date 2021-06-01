@@ -15,7 +15,7 @@ public class Partie {
 
 	/**
 	 * 
-	 * A Faire (Quand Qui Statut)
+	 * A Faire (30/05 JC EnCours)
 	 * 
 	 * Constructeur permettant de créer et d'initialiser une nouvelle partie.
 	 */
