@@ -42,6 +42,7 @@ public class Plateau {
 	public Piece getPiece(int lignePlateau,int colonnePlateau){
 		Piece piece = plateau[lignePlateau][colonnePlateau];
 		System.out.println(plateau);
+		System.out.println(piece);
 		return piece;
 	}
 
