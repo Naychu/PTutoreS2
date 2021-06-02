@@ -1,4 +1,6 @@
 package partie;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 import composants.Objet;
 import composants.Piece;
@@ -18,6 +20,7 @@ public class ElementsPartie {
 	private Plateau plateau; 	// Le plateau des pièces.
 	private Piece pieceLibre; 	// La pièce libre.
 	private int nombreJoueurs; 	// Le nombre de joueurs.
+	private List<Integer> aused = new ArrayList<Integer>(); // Liste des objets d�j� attribu�s
 
 	/**
 	 * 
@@ -61,83 +64,39 @@ public class ElementsPartie {
 	}
 
 	/**
-	 * A Faire (29/05/2021 all A verifier)
+	 * A Faire (29/05/2021 all Fini)
 	 * 
 	 * Méthode permettant d'attribuer les objets aux différents joueurs de manière aléatoire.
 	 */
 	public void attribuerObjetsAuxJoueurs(){
-		boolean exist = false;
 		Random rand = new Random();
 
 		if (joueurs.length == 3) {
-			int[] aused = new int[joueurs.length * 5];
 			for(Joueur all : joueurs) {
 				for(int i = 0; i <= 5; i++) {
 					int r = rand.nextInt(18);
-					for(int check : aused) {
-						exist = false;
-						if(check == r) {
-							exist = true;
-							}
-						System.out.println(exist);
-					}
-					if(exist == true) {
+					if(aused.contains(r) == true) {
 						i--;
 					} else {
 						IG.changerObjetJoueur(all.getNumJoueur(), r, i);
-						aused[i] = r;
+						aused.add(r);
 					}
-					System.out.println(aused);
 				}
 			}
 		}
 		if (joueurs.length == 2) {
-			int[] aused2 = new int[joueurs.length * 8];
 			for(Joueur all : joueurs) {
 				for(int i = 0; i <= 8; i++) {
 					int r = rand.nextInt(18);
-					for(int check : aused2) {
-						exist = false;
-						if(check == r) {
-							exist = true;
-							}
-						System.out.println(exist);
-					}
-					if(exist == true) {
+					if(aused.contains(r) == true) {
 						i--;
 					} else {
 						IG.changerObjetJoueur(all.getNumJoueur(), r, i);
-						aused2[i] = r;
+						aused.add(r);
 					}
-					System.out.println(aused2);
 				}
 			}
 		}
-	
-		/*int tab[] = new int[24];
-		int g = 0;
-		for(int i=0; i<=joueurs.length; i++) {
-			tab[g] = i;
-			for (int j = 0; j<=objets.length;j++) {
-				boolean t = false;
-				Random rand = new Random();
-				int r = rand.nextInt(objets.length);
-				while(t==false){
-					r = rand.nextInt(objets.length);
-					for (int h = 0 ; h<=tab.length;h++){
-						if(tab[h]!=r) {
-							t = true;					
-						}
-					}
-				}
-				
-				tab[g] = r;
-				g += 1;
-			}
-			tab[g]=999;
-			g+=1;
-			
-		}*/
 	}
 
 	/**
@@ -203,7 +162,7 @@ public class ElementsPartie {
 	 * @param choixEntree L'entrée choisie pour réaliser l'insertion (un nombre entre 0 et 27).
 	 */
 	public void insertionPieceLibre(int choixEntree){
-		// A Compléter
+
 	}
 
 
