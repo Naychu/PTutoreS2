@@ -83,6 +83,14 @@ public class TestElementsPartie {
 		IG.miseAJourAffichage();
 		IG.attendreClic();
 		
+		String messages[]={
+					"",
+					"Choisissez une entrée ...",
+					""
+			};
+		IG.afficherMessage(messages);
+		IG.miseAJourAffichage();
+		
 	}
 
 }

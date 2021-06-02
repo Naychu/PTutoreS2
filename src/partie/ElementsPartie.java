@@ -162,6 +162,7 @@ public class ElementsPartie {
 	 * @param choixEntree L'entrée choisie pour réaliser l'insertion (un nombre entre 0 et 27).
 	 */
 	public void insertionPieceLibre(int choixEntree){
+		
 
 	}
 

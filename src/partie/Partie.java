@@ -1,11 +1,14 @@
 package partie;
 
+import java.util.Random;
+
 import composants.Objet;
 import composants.Piece;
 import composants.Plateau;
 import grafix.interfaceGraphique.IG;
 import joueurs.Joueur;
 import joueurs.JoueurOrdinateur;
+import tests.TestJoueur;
 
 public class Partie {
 	static double version=0.0;
@@ -63,8 +66,8 @@ public class Partie {
 		// Création des éléments de la partie
 		elementsPartie=new ElementsPartie(joueurs);
 	}
-
-
+	
+	
 	/**
 	 * 
 	 * A Faire (Quand Qui Statut)
@@ -72,8 +75,51 @@ public class Partie {
 	 * Méthode permettant de lancer une partie.
 	 */
 	public void lancer(){
-		// A Compléter
+		String message[]={
+				"",
+				"Cliquez pour afficher les objets �",
+				""
+		};
+		IG.afficherMessage(message);
+		IG.miseAJourAffichage();
+		IG.attendreClic();
+		
+		Objet[] t = Objet.nouveauxObjets();
+		int [] pos = new int[36];
+		boolean b = false;
+		int r = 0;
+		int y = 0;
+
+		while(r < 18){
+			Random rand1 = new Random();
+			int l = rand1.nextInt(7);
+			int c = rand1.nextInt(7);
+			for ( int i = 0;i<pos.length-1;i+=2) {
+				if (pos[i]==l && pos[i+1] == c) {
+					b = true;
+				}
+			}
+			if ( b == false) {
+				IG.placerObjetPlateau(t[r].getNumeroObjet(),l,c);
+				pos[y*2]=l;
+				pos[y*2+1]=c;
+				y  +=1;
+				r +=1;
+			}
+			b = false;
+		}
+		IG.miseAJourAffichage();
+		String message2[]={
+				"",
+				"Cliquez pour continuer �",
+				""
+		};
+		IG.afficherMessage(message2);
+		IG.miseAJourAffichage();
+		IG.attendreClic();
+		
 	}
+
 
 	/**
 	 * 
@@ -82,10 +128,9 @@ public class Partie {
 	 * @param args Les arguments du programmes.
 	 */
 	public static void main(String[] args) {
-		while(true){
-			Partie partie=new Partie();
-			partie.lancer();
-		}
+		Partie partie=new Partie();
+		partie.lancer();
+		
 	}
 
 }
