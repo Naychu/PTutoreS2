@@ -73,7 +73,7 @@ public class ElementsPartie {
 			int[] aused = new int[joueurs.length * 5];
 			for(Joueur all : joueurs) {
 				for(int i = 0; i <= 5; i++) {
-					int r = rand.nextInt(19);
+					int r = rand.nextInt(18);
 					for(int check : aused) {
 						exist = false;
 						if(check == r) {
@@ -95,7 +95,7 @@ public class ElementsPartie {
 			int[] aused2 = new int[joueurs.length * 8];
 			for(Joueur all : joueurs) {
 				for(int i = 0; i <= 8; i++) {
-					int r = rand.nextInt(19);
+					int r = rand.nextInt(18);
 					for(int check : aused2) {
 						exist = false;
 						if(check == r) {
