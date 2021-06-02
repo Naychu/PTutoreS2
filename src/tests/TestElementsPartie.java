@@ -92,7 +92,7 @@ public class TestElementsPartie {
 					""
 			};
 		
-		System.out.println(plateau.getPiece(2, 2).getModelePiece());
+		//System.out.println(plateau.getPiece(2, 2).getModelePiece());
 		IG.afficherMessage(avert);
 		IG.miseAJourAffichage();
 		int entree=IG.attendreChoixEntree();

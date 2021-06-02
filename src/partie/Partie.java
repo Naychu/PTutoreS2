@@ -118,7 +118,41 @@ public class Partie {
 		IG.miseAJourAffichage();
 		IG.attendreClic();
 		
-	}
+		while(true) {
+            for(Joueur all :elementsPartie.getJoueurs()) {            
+                String tour[]={
+                        "",
+                        "Au tour de " + all.getNomJoueur(),
+                        "Sélectionner une case ...",
+                        ""
+                };
+                
+                IG.afficherMessage(tour);
+                IG.miseAJourAffichage();
+                
+                if(all.getCategorie().equals("Ordinateur")){
+                    IG.placerJoueurSurPlateau(all.getNumJoueur(), all.getPosLigne(), all.getPosColonne());
+                    
+                } else {
+                    int[] choixCase = all.choisirCaseArrivee(null);
+                    IG.placerJoueurSurPlateau(all.getNumJoueur(), choixCase[0], choixCase[1]);    
+                    
+                }
+                IG.afficherMessage(tour);
+                IG.miseAJourAffichage();
+                
+                /* 
+                     int entree=IG.attendreChoixEntree();
+                    System.out.println("L'entrée est :" + entree);
+                    elementsPartie.insertionPieceLibre(entree);
+                    IG.miseAJourAffichage();
+                    IG.attendreClic();
+        
+                 */
+            }
+        }
+    }
+
 
 
 	/**
