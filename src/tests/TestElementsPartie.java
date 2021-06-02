@@ -24,7 +24,7 @@ public class TestElementsPartie {
         IG.creerFenetreJeu("Démo Librairie IG version 1.9",nbJoueurs);
         IG.rendreVisibleFenetreJeu();
         
-        Plateau plateau = new Plateau();
+        Plateau plateau = elementsPartie.getPlateau();
         Piece pieceHorsPlateau = plateau.placerPiecesAleatoierment();
         
         IG.changerPieceHorsPlateau(pieceHorsPlateau.getModelePiece(), pieceHorsPlateau.getOrientationPiece());
@@ -83,13 +83,23 @@ public class TestElementsPartie {
 		IG.miseAJourAffichage();
 		IG.attendreClic();
 		
-		String messages[]={
+		// Test Uniquement
+		
+		String avert[]={
 					"",
-					"Choisissez une entrée ...",
+					"Test",
+					"Clique sur une flèche",
 					""
 			};
-		IG.afficherMessage(messages);
+		
+		System.out.println(plateau.getPiece(2, 2).getModelePiece());
+		IG.afficherMessage(avert);
 		IG.miseAJourAffichage();
+		int entree=IG.attendreChoixEntree();
+		System.out.println("L'entrée est :" + entree);
+		elementsPartie.insertionPieceLibre(entree);
+		IG.miseAJourAffichage();
+		IG.attendreClic();
 		
 	}
 

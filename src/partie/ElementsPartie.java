@@ -162,8 +162,29 @@ public class ElementsPartie {
 	 * @param choixEntree L'entrée choisie pour réaliser l'insertion (un nombre entre 0 et 27).
 	 */
 	public void insertionPieceLibre(int choixEntree){
-		
-
+		if(choixEntree >= 0 && choixEntree <= 6) {
+			int col = choixEntree;
+			int oldMhp = IG.recupererModelePieceHorsPlateau();
+			int oldOhp = IG.recupererOrientationPieceHorsPlateau();
+			Piece newHP = plateau.getPiece(6, col);
+			int newMhp = newHP.getModelePiece();
+			int newOhp = newHP.getModelePiece();
+			IG.changerPieceHorsPlateau(newMhp, newOhp);
+			for(int l = 6; l <= 0; l--) {
+				int getMpiece = plateau.getPiece(l - 1, col).getModelePiece();
+				int getOpiece = plateau.getPiece(l - 1, col).getModelePiece();
+				IG.changerPiecePlateau(l, col, getMpiece, getOpiece);
+			}
+		}
+		if(choixEntree >= 7 && choixEntree <= 13) {
+			int lig = choixEntree - 7;
+		}
+		if(choixEntree >= 14 && choixEntree <= 20) {
+			int col = choixEntree - 14;
+		}
+		if(choixEntree >= 21 && choixEntree <= 27) {
+			int lig = choixEntree - 21;
+		}
 	}
 
 

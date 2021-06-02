@@ -1,7 +1,5 @@
 package composants;
 
-import java.util.Random;
-
 /**
  * Cette classe permet de gérer un plateau de jeu constitué d'une grille de pièces (grille de 7 lignes sur 7 colonnes).
  *
@@ -42,10 +40,9 @@ public class Plateau {
 	 * @return La pièce se trouvant sur la ligne lignePlateau et la colonne colonnePlateau. Si il n'y a pas de pièce, null est retourné.
 	 */
 	public Piece getPiece(int lignePlateau,int colonnePlateau){
-		if (plateau[lignePlateau][colonnePlateau]!=null) {
-			return plateau[lignePlateau][colonnePlateau];
-		}
-		return null;
+		Piece piece = plateau[lignePlateau][colonnePlateau];
+		System.out.println(plateau);
+		return piece;
 	}
 
 	/**
