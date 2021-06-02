@@ -168,7 +168,7 @@ public class ElementsPartie {
 			int oldOhp = IG.recupererOrientationPieceHorsPlateau();
 			Piece newHP = plateau.getPiece(6, col);
 			int newMhp = newHP.getModelePiece();
-			int newOhp = newHP.getModelePiece();
+			int newOhp = newHP.getOrientationPiece();
 			IG.changerPieceHorsPlateau(newMhp, newOhp);
 			for(int l = 6; l <= 1; l--) {
 				int getMpiece = plateau.getPiece(l - 1, col).getModelePiece();
@@ -183,7 +183,7 @@ public class ElementsPartie {
 			int oldOhp = IG.recupererOrientationPieceHorsPlateau();
 			Piece newHP = plateau.getPiece(6, lig);
 			int newMhp = newHP.getModelePiece();
-			int newOhp = newHP.getModelePiece();
+			int newOhp = newHP.getOrientationPiece();
 			IG.changerPieceHorsPlateau(newMhp, newOhp);
 			for(int c = 6; c <= 1; c--) {
 				int getMpiece = plateau.getPiece(c - 1, lig).getModelePiece();
@@ -198,7 +198,7 @@ public class ElementsPartie {
 			int oldOhp = IG.recupererOrientationPieceHorsPlateau();
 			Piece newHP = plateau.getPiece(0, col);
 			int newMhp = newHP.getModelePiece();
-			int newOhp = newHP.getModelePiece();
+			int newOhp = newHP.getOrientationPiece();
 			IG.changerPieceHorsPlateau(newMhp, newOhp);
 			for(int l = 0; l <= 5; l++) {
 				int getMpiece = plateau.getPiece(l + 1, col).getModelePiece();
@@ -213,7 +213,7 @@ public class ElementsPartie {
 			int oldOhp = IG.recupererOrientationPieceHorsPlateau();
 			Piece newHP = plateau.getPiece(0, lig);
 			int newMhp = newHP.getModelePiece();
-			int newOhp = newHP.getModelePiece();
+			int newOhp = newHP.getOrientationPiece();
 			IG.changerPieceHorsPlateau(newMhp, newOhp);
 			for(int c = 0; c <= 5; c++) {
 				int getMpiece = plateau.getPiece(c + 1, lig).getModelePiece();
