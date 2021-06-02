@@ -40,14 +40,11 @@ public class Plateau {
 	 * @return La pièce se trouvant sur la ligne lignePlateau et la colonne colonnePlateau. Si il n'y a pas de pièce, null est retourné.
 	 */
 	public Piece getPiece(int lignePlateau,int colonnePlateau){
-<<<<<<< HEAD
 		return this.plateau[lignePlateau][colonnePlateau];
-=======
-		Piece piece = plateau[lignePlateau][colonnePlateau];
+		/*Piece piece = plateau[lignePlateau][colonnePlateau];
 		System.out.println(plateau);
 		System.out.println(piece);
-		return piece;
->>>>>>> 9eb8a0688a2d1970e6565d32d52aec577c689e5e
+		return piece;*/
 	}
 
 	/**
