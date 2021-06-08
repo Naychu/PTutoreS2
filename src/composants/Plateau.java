@@ -59,6 +59,14 @@ public class Plateau {
 	 */
 	public Piece placerPiecesAleatoierment(){
 		Piece pieces[] = Piece.nouvellesPieces();
+		int t = 0;
+		for(int i = 0; i <= 6; i++) {
+			for(int j = 0; j <= 6; j++) {
+				plateau[i][j] = pieces[t];
+				t++;
+				System.out.println(i + " " + j);
+			}
+		}
 		return pieces[50];
 	}
 		
@@ -155,17 +163,18 @@ public class Plateau {
 	 */
 	public int[][] calculeChemin(int posLigCaseDep,int posColCaseDep,int posLigCaseArr,int posColCaseArr){
 		int resultat[][] = new int[7][7];
-		for(int i=0;i<7;i++) {
+		/*for(int i=0;i<7;i++) {
 			for(int j=0;j<7;j++) {
 				resultat[i][j]=0;
 			}
 		}
-		return resultat;
-	}
+		return resultat;*/
 		
-		
-         /**
-          * while ((posLigCaseDep != posLigCaseArr) && (posColCaseDep != posColCaseArr)) {
+		System.out.println(passageEntreCases(posLigCaseDep, posColCaseDep, posLigCaseDep + 1,posColCaseDep));
+		System.out.println(passageEntreCases(posLigCaseDep, posColCaseDep, posLigCaseDep - 1,posColCaseDep));
+		System.out.println(passageEntreCases(posLigCaseDep, posColCaseDep, posLigCaseDep,posColCaseDep + 1));
+		System.out.println(passageEntreCases(posLigCaseDep, posColCaseDep, posLigCaseDep - 1,posColCaseDep));	
+        /*while ((posLigCaseDep != posLigCaseArr) && (posColCaseDep != posColCaseArr)) {
           
         	if(passageEntreCases(posLigCaseDep, posColCaseDep, posLigCaseDep + 1,posColCaseDep)==true) {
         		posLigCaseDep = posLigCaseDep + 1 ;
@@ -188,10 +197,9 @@ public class Plateau {
                     
                 }
                 
-            }
+         }*/
         return resultat;
     }
-    **\
 
 	/**
 	 * 

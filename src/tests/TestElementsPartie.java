@@ -31,8 +31,7 @@ public class TestElementsPartie {
 		
 		for(int i = 0; i <= taillePlateau - 1; i++) {
 			for(int j = 0; j < taillePlateau; j++) {
-				Piece piecePlateau = plateau.placerPiecesAleatoierment();
-				IG.changerPiecePlateau(i, j, piecePlateau.getModelePiece(), piecePlateau.getOrientationPiece());	
+				IG.changerPiecePlateau(i, j, plateau.getPiece(i, j).getModelePiece(), plateau.getPiece(i, j).getOrientationPiece());	
 			}
 		}
         
@@ -92,7 +91,7 @@ public class TestElementsPartie {
 					""
 			};
 		
-		//System.out.println(plateau.getPiece(2, 2).getModelePiece());
+		System.out.println(plateau.getPiece(2, 2).getModelePiece());
 		IG.afficherMessage(avert);
 		IG.miseAJourAffichage();
 		int entree=IG.attendreChoixEntree();

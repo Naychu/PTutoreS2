@@ -43,8 +43,8 @@ public class TestPlateau {
 		IG.miseAJourAffichage();
 		IG.attendreClic();
 		
-		int[][] chemin = plateau.calculeChemin(3, 3, 0, 2);
-        System.out.println(chemin);
+		int[][] chemin = plateau.calculeChemin(0, 0, 0, 2);
+        //System.out.println(chemin);
         
         IG.miseAJourAffichage();
 		IG.attendreClic();
