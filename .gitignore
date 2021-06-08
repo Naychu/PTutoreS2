@@ -3,4 +3,5 @@
 .project
 .bin/
 .settings/
+.metadata
 /bin/
