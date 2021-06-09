@@ -204,16 +204,19 @@ public class ElementsPartie {
 			lig = choixEntree - 7;
 			int oldMhp = IG.recupererModelePieceHorsPlateau();
 			int oldOhp = IG.recupererOrientationPieceHorsPlateau();
-			Piece newHP = plateau.getPiece(6, lig);
+			Piece newHP = plateau.getPiece(lig, 0);
 			int newMhp = newHP.getModelePiece();
 			int newOhp = newHP.getOrientationPiece();
 			IG.changerPieceHorsPlateau(newMhp, newOhp);
-			for(int c = 6; c <= 1; c--) {
-				int getMpiece = plateau.getPiece(c - 1, lig).getModelePiece();
-				int getOpiece = plateau.getPiece(c - 1, lig).getOrientationPiece();
-				IG.changerPiecePlateau(c, lig, getMpiece, getOpiece);
+			int c = 5;
+			while(c >= 0) {
+				int getMpiece = plateau.getPiece(lig, c + 1).getModelePiece();
+				int getOpiece = plateau.getPiece(lig, c + 1).getOrientationPiece();
+				IG.changerPiecePlateau(lig, c, getMpiece, getOpiece);
+				System.out.println(c + " " + (c+1));
+				c--;
 			}
-			IG.changerPiecePlateau(0, lig, oldMhp, oldOhp);
+			IG.changerPiecePlateau(lig, 6, oldMhp, oldOhp);
 		}
 		if(choixEntree >= 14 && choixEntree <= 20) {
 			int oldMhp = IG.recupererModelePieceHorsPlateau();
@@ -226,7 +229,6 @@ public class ElementsPartie {
 				int getMpiece = plateau.getPiece(l + 1, col).getModelePiece();
 				int getOpiece = plateau.getPiece(l + 1, col).getOrientationPiece();
 				IG.changerPiecePlateau(l, col, getMpiece, getOpiece);
-				System.out.println(l + " " + (l + 1));
 				l--;
 			}
 			IG.changerPieceHorsPlateau(newMhp, newOhp);
