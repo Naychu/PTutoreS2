@@ -117,8 +117,8 @@ public class Partie {
 		IG.afficherMessage(message2);
 		IG.miseAJourAffichage();
 		IG.attendreClic();
-		
-		while(true) {
+		int jeu = 0;
+		while(jeu != 5) {
             for(Joueur all :elementsPartie.getJoueurs()) {            
                 String tour[]={
                         "",
@@ -149,6 +149,22 @@ public class Partie {
                     IG.attendreClic();
         
                  */
+                String avert[]={
+    					"",
+    					"Clique sur une flèche",
+    					""
+    			};
+    		
+                
+                IG.afficherMessage(avert);
+                IG.miseAJourAffichage();
+                int entree=IG.attendreChoixEntree();
+                System.out.println("L'entrée est :" + entree);
+                elementsPartie.insertionPieceLibre(entree);
+                IG.miseAJourAffichage();
+                IG.attendreClic();
+                jeu=jeu+1;
+                System.out.println("jeu"+jeu);
             }
         }
     }
