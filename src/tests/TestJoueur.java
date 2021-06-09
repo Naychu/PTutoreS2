@@ -3,9 +3,19 @@ import composants.Piece;
 import composants.Plateau;
 import grafix.interfaceGraphique.IG;
 import joueurs.Joueur;
-import joueurs.JoueurOrdinateur;
 
+/**
+ * 
+ * Cette classe permet de tester l'utilisation des méthodes pour attribuer les paramètres aux joueurs
+ * 
+ */
 public class TestJoueur{
+	/**
+	 * 
+	 * Programme principal permettant de lancer le jeu.
+	 * 
+	 * @param args Les arguments du programmes.
+	 */
 	public static void main(String[] args) {
 		int taillePlateau = 7;
 		

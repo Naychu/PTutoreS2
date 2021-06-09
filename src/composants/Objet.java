@@ -1,9 +1,5 @@
 package composants;
 
-import java.util.Random;
-
-import grafix.interfaceGraphique.IG;
-
 /**
  * 
  * Cette classe permet de représenter chacun des objets du jeu.
@@ -150,10 +146,10 @@ public class Objet {
 	 * @return Une copie de l'objet.
 	 */
 	public Objet copy(){
-		Objet objet=new Objet(numObjet);
-		objet.posLignePlateau=posLignePlateau;
-		objet.posColonnePlateau=posColonnePlateau;
-		objet.surPlateau=surPlateau;
+		Objet objet = new Objet(numObjet);
+		objet.posLignePlateau = posLignePlateau;
+		objet.posColonnePlateau = posColonnePlateau;
+		objet.surPlateau = surPlateau;
 		return objet;
 	}
 

@@ -9,8 +9,19 @@ import grafix.interfaceGraphique.IG;
 import joueurs.Joueur;
 import partie.ElementsPartie;
 
+/**
+ * 
+ * Cette classe permet de tester tous les éléments de la partie réunis
+ *
+ */
 public class TestElementsPartie {
 
+	/**
+	 * 
+	 * Programme principal permettant de lancer le jeu.
+	 * 
+	 * @param args Les arguments du programmes.
+	 */
 	public static void main(String[] args) {
 		int taillePlateau = 7;
         
@@ -50,7 +61,7 @@ public class TestElementsPartie {
 		IG.miseAJourAffichage();
 		IG.attendreClic();
 		
-		Objet[] t = Objet.nouveauxObjets();
+		Objet[] t = elementsPartie.getObjets();
 		int [] pos = new int[36];
 		boolean b = false;
 		int r = 0;
@@ -66,7 +77,8 @@ public class TestElementsPartie {
 				}
 			}
 			if ( b == false) {
-				IG.placerObjetPlateau(t[r].getNumeroObjet(),l,c);
+				t[r].positionneObjet(l, c);
+				IG.placerObjetPlateau(t[r].getNumeroObjet(),t[r].getPosLignePlateau(),t[r].getPosColonnePlateau());
 				pos[y*2]=l;
 				pos[y*2+1]=c;
 				y  +=1;

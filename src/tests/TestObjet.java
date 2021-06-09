@@ -5,8 +5,18 @@ import java.util.Random;
 import composants.Objet;
 import grafix.interfaceGraphique.IG;
 
+/**
+ * 
+ * Cette classe permet de tester l'attribution des objets sur le plateau
+ * 
+ */
 public class TestObjet {
-
+	/**
+	 * 
+	 * Programme principal permettant de lancer le jeu.
+	 * 
+	 * @param args Les arguments du programmes.
+	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		

@@ -7,8 +7,12 @@ import composants.Piece;
 import composants.Plateau;
 import grafix.interfaceGraphique.IG;
 import joueurs.Joueur;
-import joueurs.JoueurOrdinateur;
-import tests.TestJoueur;
+
+/**
+ * 
+ * Cette classe permet le lancement de la partie avec tous les éléments du jeu
+ *
+ */
 
 public class Partie {
 	static double version=0.0;
@@ -35,14 +39,13 @@ public class Partie {
 		
 		// Element: Plateau
 		Plateau plateau = elementsPartie.getPlateau();
-	    Piece pieceHorsPlateau = plateau.placerPiecesAleatoierment();
+	    Piece pieces = elementsPartie.getPieceLibre();
 	        
-	    IG.changerPieceHorsPlateau(pieceHorsPlateau.getModelePiece(), pieceHorsPlateau.getOrientationPiece());
+	    IG.changerPieceHorsPlateau(pieces.getModelePiece(), pieces.getOrientationPiece());
 			
-		for(int i = 0; i <= 7 - 1; i++) {
+	    for(int i = 0; i <= 7 - 1; i++) {
 			for(int j = 0; j < 7; j++) {
-				Piece piecePlateau = plateau.placerPiecesAleatoierment();
-				IG.changerPiecePlateau(i, j, piecePlateau.getModelePiece(), piecePlateau.getOrientationPiece());	
+				IG.changerPiecePlateau(i, j, plateau.getPiece(i, j).getModelePiece(), plateau.getPiece(i, j).getOrientationPiece());	
 			}
 		}
 		
@@ -84,7 +87,7 @@ public class Partie {
 		IG.miseAJourAffichage();
 		IG.attendreClic();
 		
-		Objet[] t = Objet.nouveauxObjets();
+		Objet[] t = elementsPartie.getObjets();
 		int [] pos = new int[36];
 		boolean b = false;
 		int r = 0;

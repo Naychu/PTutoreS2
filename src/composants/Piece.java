@@ -162,7 +162,7 @@ abstract public class Piece {
 	 * A Faire (11/05/2021 JC Finalisé)
 	 * 
 	 * Méthode indiquant si il existe un point d'entrée à une certaine position (0: en haut, 1: à droite, 2: en bas, 3: à gauche).
-	 * @param pointEntree L'indice/la position du point d'entrée.
+	 * (Non utilisé) param pointEntree L'indice/la position du point d'entrée.
 	 * @return true si il y a un point d'entrée, sinon false.
 	 */
 	public boolean[] getPointsEntree(){

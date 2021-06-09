@@ -1,9 +1,19 @@
 package tests;
 import grafix.interfaceGraphique.IG;
 
-
+/**
+ * 
+ * Cette classe permet de tester la librairie libIG.jar
+ *
+ */
 public class DemoIG19 {
 
+	/**
+	 * 
+	 * Programme principal permettant de lancer le jeu.
+	 * 
+	 * @param args Les arguments du programmes.
+	 */
 	public static void main(String[] args) {
 		// Une petite démonstration conernant l'interface graphique
 

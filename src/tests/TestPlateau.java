@@ -4,8 +4,19 @@ import composants.Piece;
 import composants.Plateau;
 import grafix.interfaceGraphique.IG;
 
+/**
+ * 
+ * Cette classe permet de tester les méthodes correspondants au plateau
+ * 
+ */
 public class TestPlateau {
 
+	/**
+	 * 
+	 * Programme principal permettant de lancer le jeu.
+	 * 
+	 * @param args Les arguments du programmes.
+	 */
 	public static void main(String[] args) {
 		// 1
 		int taillePlateau = 7;
@@ -43,7 +54,7 @@ public class TestPlateau {
 		IG.miseAJourAffichage();
 		IG.attendreClic();
 		
-		int[][] chemin = plateau.calculeChemin(0, 0, 0, 2);
+		//int[][] chemin = plateau.calculeChemin(0, 0, 0, 2);
         //System.out.println(chemin);
         
         IG.miseAJourAffichage();

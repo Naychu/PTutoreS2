@@ -1,8 +1,19 @@
 package tests;
 import grafix.interfaceGraphique.IG;
 
+/**
+ * 
+ * Cette classe permet de découvrir les méthodes que propose la librairie
+ *
+ */
 public class MaDemoIG {
 
+	/**
+	 * 
+	 * Programme principal permettant de lancer le jeu.
+	 * 
+	 * @param args Les arguments du programmes.
+	 */
 	public static void main(String[] args) {
 		
 		int taillePlateau = 7;

@@ -3,10 +3,22 @@ package tests;
 import composants.Piece;
 import grafix.interfaceGraphique.IG;
 
+
+/**
+ * 
+ * Cette classe permet de placer les pièces sur le plateau
+ * 
+ */
 public class TestPieces {
 	private static Piece[] pieces = Piece.nouvellesPieces();
 	private static int taillePlateau = 7;
 
+	/**
+	 * 
+	 * Programme principal permettant de lancer le jeu.
+	 * 
+	 * @param args Les arguments du programmes.
+	 */
 	public static void main(String[] args) {
 		// 1. Dans un premier temps, les paramètres du jeu seront saisis. Dans la suite nous supposerons que les paramètres par défaut ont été saisis par l'utilisateur.
 		
@@ -73,6 +85,11 @@ public class TestPieces {
 		System.exit(0);
 	}
 	
+	/**
+	 * 
+	 * Méthode permettant de mettre à jour les pièces du plateau en partie
+	 * 
+	 */
 	public static void updatePieces() {
 		int g = 0;
 		for(int i = 0; i <= taillePlateau - 1; i++) {
